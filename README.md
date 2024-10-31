@@ -21,19 +21,19 @@
 - [Windows binaries of GNU Wget](https://eternallybored.org/misc/wget/)
   - 根據系統架構 (x86, x64, ARM64) 下載最新版的 EXE 檔案即可
   - 您應該會獲得一個 `wget.exe` 執行檔
-  - 把 `wget.exe` 執行檔放到跟 `update.bat`, `G3300.xsl` 同一個目錄內
+  - 把 `wget.exe` 執行檔放到跟 `update.bat`, `G3300.xsl` 同一個資料夾
 - [UnZip for Windows](https://gnuwin32.sourceforge.net/packages/unzip.htm)
   - 下載[最新版本的 Binaries](https://gnuwin32.sourceforge.net/downlinks/unzip-bin-zip.php)
   - 您應該會從 SourceForge 獲得 `unzip-5.51-1-bin.zip` 壓縮檔
   - 解壓縮 `unzip-5.51-1-bin.zip`
   - 從 `bin` 資料夾裡面找到 `unzip.exe` 執行檔
-  - 把 `unzip.exe` 執行檔放到跟 `update.bat`, `G3300.xsl` 同一個目錄內
+  - 把 `unzip.exe` 執行檔放到跟 `update.bat`, `G3300.xsl` 同一個資料夾
 - [XMLStarlet command line XML toolkit](https://sourceforge.net/projects/xmlstar/)
   - 下載[最新版本](https://sourceforge.net/projects/xmlstar/files/latest/download)
   - 您應該會從 SourceForge 獲得 `xmlstarlet-1.6.1-win32.zip` 壓縮檔
   - 解壓縮 `xmlstarlet-1.6.1-win32.zip`
   - 從 `xmlstarlet-1.6.1` 資料夾裡面找到 `xml.exe` 執行檔
-  - 把 `xml.exe` 執行檔放到跟 `update.bat`, `G3300.xsl` 同一個目錄內
+  - 把 `xml.exe` 執行檔放到跟 `update.bat`, `G3300.xsl` 同一個資料夾
 
 這個步驟只需要做一次。上述開源工具中，除了 Wget 還有在更新之外，另外兩個都已經很久沒更新了。
 
