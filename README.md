@@ -8,6 +8,12 @@
 
 台灣衛生福利部食品藥物管理署在政府資料開放平台上，每七天會發布更新醫療器材許可證資料集。我寫了一小段批次檔，用來自動下載 XML 格式的資料集，並且利用 [XSL Transformations (XSLT)](https://www.w3.org/TR/xslt/) 技術，從中擷取屬於助聽器（次類別為 `G.3300 助聽器` 的那些），以便查詢檢索。
 
+## 下載
+
+請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `Source code (zip)` 那個連結。
+
+使用前記得要解壓縮。
+
 ## 安裝‧環境設定
 
 這是一個可攜帶、免安裝的工具，只需要把幾個必要的檔案放在同一個資料夾內，就可以使用了。最必要的檔案是 `update.bat` 和 `G3300.xsl`，另外還有幾個開源工具要分別下載：
