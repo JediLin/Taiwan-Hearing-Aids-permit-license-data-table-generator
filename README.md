@@ -8,14 +8,34 @@
 
 台灣衛生福利部食品藥物管理署在政府資料開放平台上，每七天會發布更新醫療器材許可證資料集。我寫了一小段批次檔，用來自動下載 XML 格式的資料集，並且利用 [XSL Transformations (XSLT)](https://www.w3.org/TR/xslt/) 技術，從中擷取屬於助聽器（次類別為 `G.3300 助聽器` 的那些），以便查詢檢索。
 
+## 安裝‧環境設定
+
+有幾個開源工具要先分別下載：
+
+- [Windows binaries of GNU Wget](https://eternallybored.org/misc/wget/)
+  - 根據系統架構 (x86, x64, ARM64) 下載最新版的 EXE 檔案即可
+  - 您應該會獲得一個 `wget.exe` 執行檔
+  - 把 `wget.exe` 執行檔放到跟 `update.bat` 同一個目錄內
+- [UnZip for Windows](https://gnuwin32.sourceforge.net/packages/unzip.htm)
+  - 下載[最新版本的 Binaries](https://gnuwin32.sourceforge.net/downlinks/unzip-bin-zip.php)
+  - 您應該會從 SourceForge 獲得 `unzip-5.51-1-bin.zip` 壓縮檔
+  - 解壓縮 `unzip-5.51-1-bin.zip`
+  - 從 `bin` 資料夾裡面找到 `unzip.exe` 執行檔
+  - 把 `unzip.exe` 執行檔放到跟 `update.bat` 同一個目錄內
+- [XMLStarlet command line XML toolkit](https://sourceforge.net/projects/xmlstar/)
+  - 下載[最新版本](https://sourceforge.net/projects/xmlstar/files/latest/download)
+  - 您應該會從 SourceForge 獲得 `xmlstarlet-1.6.1-win32.zip` 壓縮檔
+  - 解壓縮 `xmlstarlet-1.6.1-win32.zip`
+  - 從 `xmlstarlet-1.6.1` 資料夾裡面找到 `xml.exe` 執行檔
+  - 把 `xml.exe` 執行檔放到跟 `update.bat` 同一個目錄內
+
+這個步驟只需要做一次。上述開源工具中，除了 Wget 還有在更新之外，另外兩個都已經很久沒更新了。
+
 ## 使用方法
 
-- 首先要把 Perl 裝起來。
-- 我還用到 [WinZip Command Line](https://www.winzip.com/en/download/command-line/) 工具來處理解壓縮……比較新的 Windows 版本已經內建可以解壓縮 zip 格式的 tar 工具，另外也有許多開源工具（例如 7-zip）可以做這件事，有需要可以自己修改 `update.bat` 內的指令。
-- 執行 `update.bat` 即可自動下載（或更新）資料庫，做必要的編輯修改，然後在相同路徑位置儲存成 `G3300.xml`。
-- 把 `G3300.xml`, `G3300.xsl`, `G3300.css` 三個檔案放在可以透過 http 或 https 通訊協定取用的地方，然後用網頁瀏覽器開啟 `G3300.xml` 即可。
-  - 單純放在自己的硬碟上然後用瀏覽器開啟會有問題，因為 file 協定的安全性等級不同。
-  - `G3300.xml` 檔案大小通常超過 200mb，瀏覽器載入到顯示要花一陣子，請有耐心。
+- 執行 `update.bat` 即可自動下載最新的醫療器材許可證資料集，擷取資料及轉換檔案，在相同路徑位置儲存成 `G3300.html`，然後呼叫瀏覽器開啟。
+- 如果不想更新資料，只想單純瀏覽檢視資料表，可以直接用任何網頁瀏覽器開啟 `G3300.html` 即可。
+- 如果要把資料表傳給別人，只需要提供 `G3300.html` 檔案就夠了。
 
 ## 相關說明
 

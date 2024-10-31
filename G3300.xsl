@@ -5,11 +5,23 @@
   <xsl:template match="/">
     <html>
     <head>
-    <link rel="Stylesheet" href="G3300.css" type="text/css" />
     <title>助聽器醫療器材許可證字號</title>
+    <style>
+table thead th, table tbody td {
+  padding: 5px;
+  max-width: 20em;
+}
+table tbody tr:nth-child(2n) td {
+  background: #ffcccc;
+}
+table tbody tr:nth-child(2n+1) td {
+  background: #ccffff;
+}
+    </style>
     </head>
     <body>
       <table>
+      	<caption>助聽器醫療器材許可證字號暨相關資訊</caption>
       	<thead>
       	  <tr><th>許可證字號</th><th>註銷狀態</th><th>有效日期</th><th>品名</th><th>醫器規格</th><th>申請商</th><th>製造商</th></tr>
       	</thead>
@@ -31,6 +43,7 @@
           </xsl:for-each>
         </tbody>
       </table>
+      <p>資料來源：<a href="https://data.gov.tw/dataset/9576">醫療器材許可證資料集 ｜ 政府資料開放平臺</a></p>
     </body>
     </html>
   </xsl:template>
