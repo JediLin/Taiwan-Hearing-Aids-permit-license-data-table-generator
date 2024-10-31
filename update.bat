@@ -2,6 +2,12 @@
 :start
 chcp 65001
 cls
+
+IF NOT EXIST "G3300.xsl" (
+  echo 缺少 G3300.xsl 檔案，無法處理資料表。請把 G3300.xsl 跟 update.bat 放在同一個資料夾內，然後再試一次。請按任意鍵結束……
+  pause > nul
+  exit
+)
 IF NOT EXIST "wget.exe" (
   echo 請先取得 GNU Wget 執行檔。現在即將使用預設瀏覽器帶您前往 GNU Wget 下載網頁，請按任意鍵繼續……
   pause > nul
