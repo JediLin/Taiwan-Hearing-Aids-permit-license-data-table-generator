@@ -5,7 +5,7 @@
   xmlns:date="http://exslt.org/dates-and-times"
   extension-element-prefixes="date">
   <xsl:template match="/">
-    <html>
+    <html lang="zh-Hant-TW">
     <head>
     <title>助聽器醫療器材許可證字號資料表</title>
     <style>
@@ -22,10 +22,10 @@ table tbody tr:nth-child(2n+1) td {
     </style>
     </head>
     <body>
-      <table>
+      <table id="myTable">
       	<caption>助聽器醫療器材許可證字號暨相關資訊｜製表日期：<xsl:value-of select="date:year()"/> 年 <xsl:value-of select="date:month-in-year()"/> 月 <xsl:value-of select="date:day-in-month()"/> 日</caption>
       	<thead>
-      	  <tr><th>許可證字號</th><th>註銷狀態</th><th>有效日期</th><th>品名</th><th>醫器規格</th><th>申請商</th><th>製造商</th></tr>
+      	  <tr><th>許可證字號<br/>快查：<input type="text" id="myInput" onkeyup="myFunction()" placeholder="輸入數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名</th><th>醫器規格</th><th>申請商</th><th>製造商</th></tr>
       	</thead>
       	<tbody>
             <xsl:for-each select="dataList">
@@ -48,5 +48,28 @@ table tbody tr:nth-child(2n+1) td {
       <p>原始資料來源：<a href="https://data.gov.tw/dataset/9576">醫療器材許可證資料集｜政府資料開放平臺</a></p>
     </body>
     </html>
+    <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i <xsl:text disable-output-escaping="yes">&lt;</xsl:text> tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
   </xsl:template>
 </xsl:stylesheet>
