@@ -33,7 +33,7 @@ table tbody tr:nth-child(2n+1) td {
               	<xsl:if test="醫器次類別一='G.3300 助聽器'">
                   <tr>
                     <td><xsl:value-of select = "許可證字號" /></td>
-            <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
+                    <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
                     <td><xsl:value-of select = "發證日期" /><br />｜<br /><xsl:value-of select = "有效日期" /></td>
                     <td><xsl:value-of select = "中文品名" /><br /><xsl:value-of select = "英文品名" /></td>
                     <td><xsl:value-of select = "醫療器材級數" /> 級醫材<br /><xsl:value-of select = "醫器規格" /></td>
@@ -44,7 +44,7 @@ table tbody tr:nth-child(2n+1) td {
               	<xsl:if test="醫器次類別一='G3300 助聽器'">
                   <tr>
                     <td><xsl:value-of select = "許可證字號" /></td>
-            <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
+                    <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
                     <td><xsl:value-of select = "發證日期" /><br />｜<br /><xsl:value-of select = "有效日期" /></td>
                     <td><xsl:value-of select = "中文品名" /><br /><xsl:value-of select = "英文品名" /></td>
                     <td><xsl:value-of select = "醫療器材級數" /> 級醫材<br /><xsl:value-of select = "醫器規格" /></td>
