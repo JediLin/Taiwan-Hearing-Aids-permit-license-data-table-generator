@@ -1,7 +1,8 @@
 # 台灣助聽器醫療器材許可證字號資料表產生器
+![GitHub all releases](https://img.shields.io/github/downloads/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/total?style=for-the-badge)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator?label=LATEST%20RELEASE&style=for-the-badge)
-![GitHub commits since tagged version](https://img.shields.io/github/commits-since/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/latest?style=for-the-badge)
 <br/>
+![GitHub commits since tagged version](https://img.shields.io/github/commits-since/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/latest?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator?style=for-the-badge)
 
@@ -9,7 +10,7 @@
 
 ## 下載
 
-請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `Source code (zip)` 那個連結。
+請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `G3300.zip` 那個連結。
 
 使用前記得要解壓縮。
 
