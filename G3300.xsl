@@ -47,6 +47,18 @@ table tbody tr:nth-child(2n+1) td {
         </tbody>
       </table>
       <p>原始資料來源：<a href="https://data.gov.tw/dataset/9576">醫療器材許可證資料集｜政府資料開放平臺</a></p>
+      <hr/>
+      <p>台灣助聽器醫療器材許可證字號資料表產生器</p>
+      <dl>
+        <dt>目前使用的資料表產生器版本</dt>
+        <dd>v2024.12.05</dd>
+        <dt>下載最新版套件</dt>
+        <dd><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest</a></dd>
+        <dt>意見回饋／瑕疵回報</dt>
+        <dd><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/issues">https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/issues</a></dd>
+        <dt>資料表產生器專案網頁</dt>
+        <dd><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator">https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator</a></dd>
+      </dl>
     </body>
     </html>
     <script>
