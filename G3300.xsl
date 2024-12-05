@@ -30,7 +30,7 @@ table tbody tr:nth-child(2n+1) td {
       	<tbody>
             <xsl:for-each select="dataList">
               <xsl:for-each select="rows">
-              	<xsl:if test="((醫器次類別一='G.3300 助聽器') or (醫器次類別一='G3300 助聽器'))">
+              	<xsl:if test="((醫器次類別一='G.3300 助聽器') or (醫器次類別一='G3300 助聽器') or (醫器次類別二='G.3300 助聽器') or (醫器次類別二='G3300 助聽器') or (醫器次類別三='G.3300 助聽器') or (醫器次類別三='G3300 助聽器'))">
                   <tr>
                     <td><xsl:value-of select = "許可證字號" /></td>
                     <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
