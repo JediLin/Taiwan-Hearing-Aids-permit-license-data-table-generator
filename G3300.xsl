@@ -26,7 +26,7 @@ table tbody tr:nth-child(2n+1) td {
       <table id="myTable">
       	<caption>助聽器醫療器材許可證字號暨相關資訊｜製表日期：<xsl:value-of select="date:year()"/> 年 <xsl:value-of select="date:month-in-year()"/> 月 <xsl:value-of select="date:day-in-month()"/> 日</caption>
       	<thead>
-      	  <tr><th>許可證字號<br/>快查：<input type="text" id="myInput" onkeyup="myFunction()" placeholder="輸入數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名</th><th>醫器規格</th><th>申請商</th><th>製造商</th></tr>
+      	  <tr><th>許可證字號<br/>快查：<input type="text" id="myInput" onkeyup="myFunction()" placeholder="輸入數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名</th><th>醫器級數、規格</th><th>申請商</th><th>製造商</th></tr>
       	</thead>
       	<tbody>
             <xsl:for-each select="dataList">
@@ -51,7 +51,7 @@ table tbody tr:nth-child(2n+1) td {
       <p>台灣助聽器醫療器材許可證字號資料表產生器</p>
       <dl>
         <dt>目前使用的資料表產生器版本</dt>
-        <dd>v2024.12.05</dd>
+        <dd>v2024.12.06</dd>
         <dt>下載最新版套件</dt>
         <dd><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest</a></dd>
         <dt>意見回饋／瑕疵回報</dt>
