@@ -27,11 +27,14 @@ IF NOT EXIST "xml.exe" (
   exit
 )
 IF EXIST "G3300.html" (
+  echo ○○○○[0/4] 發現先前製作的資料表，自動備份為 G3300.bak.html
   del /F /Q G3300.bak.html
   copy /Y G3300.html G3300.bak.html
 )
 
 :download
+cls
+echo ●○○○[1/4] 正在從政府資料開放平臺下載醫療器材許可證資料集……
 wget.exe --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:53.0) Gecko/20100101 Firefox/53.0" --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1"
 
 IF EXIST "68_1.xml.zip" (
@@ -45,10 +48,14 @@ IF %@FILESIZE["68_1.xml.zip"] == 0 (
   del /F /Q 68_1.xml.zip
   GOTO download
 ) ELSE (
+  cls
+  echo ●●○○[2/4] 資料集已下載，正在解壓縮……
   unzip.exe 68_1.xml.zip
 )
 
 :cont
+cls
+echo ●●●○[3/4] 正在轉換產製資料表，這個步驟可能耗時約一分鐘，請耐心等候……
 xml.exe tr G3300.xsl 68_1.xml > G3300.html
 
 IF EXIST "G3300.html" (
@@ -62,7 +69,7 @@ IF EXIST "G3300.html" (
 :end
 del /F /Q *.
 cls
-echo 資料表產生完成。現在即將使用預設瀏覽器開啟資料表 (G3300.html)，請按任意鍵繼續……
+echo ●●●●[4/4] 資料表產生完成。現在即將使用預設瀏覽器開啟資料表 (G3300.html)，請按任意鍵繼續……
 pause > nul
 start "" "G3300.html"
 exit
