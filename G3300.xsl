@@ -12,6 +12,7 @@
 table thead th, table tbody td {
   padding: 5px;
   max-width: 20em;
+  word-wrap: break-word;
 }
 table tbody tr:nth-child(2n) td {
   background: #ffcccc;
