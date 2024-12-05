@@ -10,13 +10,13 @@
 
 ## 下載
 
-請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `G3300.zip` 那個連結，或者已經整理好所有第三方工具的 `G3300_full_x64.zip` 連結。
+請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `G3300_full_x64.zip` 那個連結，這是對應目前大多數使用者 x64 架構作業系統的整合版本；如果想要自己手動下載第三方工具，例如要用於不同架構的作業系統，也可以用 `G3300.zip` 連結。
 
 使用前記得要解壓縮。
 
 ## 安裝‧環境設定
 
-這是一個可攜帶、免安裝的工具，只需要把幾個必要的檔案放在同一個資料夾內，就可以使用了。最必要的檔案是 `update.bat` 和 `G3300.xsl`，另外還有幾個開源工具要分別下載：
+這是一個可攜帶、免安裝的工具，只需要把幾個必要的檔案放在同一個資料夾內，就可以使用了。最必要的檔案是 `update.bat` 和 `G3300.xsl`，另外還用到幾個開源工具（已經內含於 `G3300_full_x64.zip` ，不必另外下載）：
 
 - [Windows binaries of GNU Wget](https://eternallybored.org/misc/wget/)
   - 根據系統架構 (x86, x64, ARM64) 下載最新版的 EXE 檔案即可
