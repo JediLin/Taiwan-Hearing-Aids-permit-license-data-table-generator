@@ -30,18 +30,7 @@ table tbody tr:nth-child(2n+1) td {
       	<tbody>
             <xsl:for-each select="dataList">
               <xsl:for-each select="rows">
-              	<xsl:if test="醫器次類別一='G.3300 助聽器'">
-                  <tr>
-                    <td><xsl:value-of select = "許可證字號" /></td>
-                    <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
-                    <td><xsl:value-of select = "發證日期" /><br />｜<br /><xsl:value-of select = "有效日期" /></td>
-                    <td><xsl:value-of select = "中文品名" /><br /><xsl:value-of select = "英文品名" /></td>
-                    <td><xsl:value-of select = "醫療器材級數" /> 級醫材<br /><xsl:value-of select = "醫器規格" /></td>
-                    <td><xsl:value-of select = "申請商名稱" /><br />地址：<xsl:value-of select = "申請商地址" /></td>
-                    <td><xsl:value-of select = "製造商名稱" /><br />廠址：<xsl:value-of select = "製造廠廠址" /><br /><xsl:value-of select = "製造廠公司地址" /><br />製造廠國別：<xsl:value-of select = "製造廠國別" /></td>
-                  </tr>
-                </xsl:if>
-              	<xsl:if test="醫器次類別一='G3300 助聽器'">
+              	<xsl:if test="((醫器次類別一='G.3300 助聽器') or (醫器次類別一='G3300 助聽器'))">
                   <tr>
                     <td><xsl:value-of select = "許可證字號" /></td>
                     <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
