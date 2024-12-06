@@ -45,6 +45,15 @@
 - 如果不想更新資料，只想單純瀏覽檢視資料表，可以直接用任何網頁瀏覽器開啟 `G3300.html` 即可。
 - 如果要把資料表傳給別人，只需要提供 `G3300.html` 檔案就夠了。
 
-## 相關說明
+### 工作排程
 
-請參考我的部落格文章：《[助聽器醫療器材許可字號](https://jedi.org/blog/archives/006216.html)》
+- 如果需要排程自動更新資料表，可以使用 `silent_update.bat`
+- 建議排程每個月或每季更新一次就可以了，太頻繁更新可能會被當成異常存取
+- `silent_update.bat` 同樣會建立檔案備份及自動更新資料表，但過程中不提供任何訊息，操作完成後也不會自動用瀏覽器開啟資料表
+- 最後一次執行 `silent_update.bat` 的相關訊息會儲存在 `silent_update.log` 日誌檔（這個檔案會自動建立及覆寫），如果遭遇異常可以用來釐清執行情況
+
+## 參考資料
+
+- [《醫療器材分類分級管理辦法》第四條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0030120&flno=4)附表
+- [《身心障礙者輔具費用補助辦法》第四條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050060&flno=4)附表
+- 《[助聽器醫療器材許可字號](https://jedi.org/blog/archives/006216.html)》部落格文章
