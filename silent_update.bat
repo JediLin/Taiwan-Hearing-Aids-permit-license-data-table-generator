@@ -20,7 +20,7 @@ IF NOT EXIST "xml.exe" (
 )
 
 :checkconnection
-wget.exe -O NUL --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:53.0) Gecko/20100101 Firefox/53.0" "https://data.fda.gov.tw/" >> silent_update.log 2>&1
+wget.exe -O NUL "https://data.fda.gov.tw/" >> silent_update.log 2>&1
 IF ERRORLEVEL 1 (
   echo %time% No connection available >> silent_update.log
   exit
@@ -34,7 +34,7 @@ IF EXIST "G3300.html" (
 
 :download
 echo %time% Download XML >> silent_update.log
-wget.exe --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:53.0) Gecko/20100101 Firefox/53.0" --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1" >> silent_update.log 2>&1
+wget.exe --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1" >> silent_update.log 2>&1
 
 IF EXIST "68_1.xml.zip" (
   GOTO unzip

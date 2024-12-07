@@ -50,7 +50,7 @@ IF NOT EXIST "xml.exe" (
 )
 
 :checkconnection
-wget.exe -q -O NUL --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:53.0) Gecko/20100101 Firefox/53.0" "https://data.fda.gov.tw/"
+wget.exe -q -O NUL "https://data.fda.gov.tw/"
 IF ERRORLEVEL 1 (
   IF %colorSupport%==Yes (
     echo [31m⚠[0m  無法連上政府資料開放平臺網站。請按任意鍵結束……
@@ -81,7 +81,7 @@ IF %colorSupport%==Yes (
   echo ●○○○[1/4] 正在從政府資料開放平臺下載醫療器材許可證資料集……
 )
 echo:
-wget.exe --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:53.0) Gecko/20100101 Firefox/53.0" --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1"
+wget.exe --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1"
 
 IF EXIST "68_1.xml.zip" (
   GOTO unzip
