@@ -214,7 +214,7 @@ section#link {
           <h2>台灣助聽器醫療器材許可證字號資料表產生器</h2>
           <dl>
             <dt>目前使用的資料表產生器版本</dt>
-            <dd>v2024.12.06.2</dd>
+            <dd>v2024.12.07</dd>
           </dl>
           <ul>
             <li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">下載最新版套件</a></li>
