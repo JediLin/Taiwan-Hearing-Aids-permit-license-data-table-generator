@@ -124,19 +124,41 @@ a:active {
 a:hover {
   color: var(--red);
 }
+label {
+  color: var(--comment);
+}
+input {
+  background: var(--yellow);
+}
+input:placeholder-shown {
+  background: var(--background);
+}
+input::placeholder {
+  color: var(--yellow);
+}
 input:focus, textarea:focus {
   color: var(--foreground);
   background: var(--currentline);
 }
+input:focus-visible {
+  outline: 3px solid var(--yellow);
+}
 table {
   border-collapse: collapse;
   border: 1px solid var(--foreground);
+  margin: 0 auto;
 }
 table thead th, table tbody td {
   border: 1px solid;
   padding: 5px;
   max-width: 20em;
   word-wrap: break-word;
+}
+table thead th {
+  background: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 table + * {
   padding-top: 1em;
@@ -162,10 +184,10 @@ section#link {
     </head>
     <body>
       <h1>助聽器醫療器材許可證字號暨相關資訊</h1>
-      <table id="myTable">
+      <table id="dataTable">
       	<caption>製表日期：<xsl:value-of select="date:year()"/> 年 <xsl:value-of select="date:month-in-year()"/> 月 <xsl:value-of select="date:day-in-month()"/> 日</caption>
       	<thead>
-      	  <tr><th>許可證字號<br/>快查：<input type="text" id="myInput" onkeyup="myFunction()" placeholder="輸入數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名</th><th>醫器級數、規格</th><th>申請商</th><th>製造商</th></tr>
+      	  <tr><th>許可證字號<br/><label for="permitInput">快查：</label><input type="text" id="permitInput" onkeyup="filterFunction()" placeholder="可只輸入數字部分" title="可只輸入數字部分" aria-description="可只輸入許可證字號的數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名<br/><label for="brandInput">快查：</label><input type="text" id="brandInput" onkeyup="filterFunction()" placeholder="輸入助聽器廠牌名稱" title="輸入助聽器廠牌名稱" aria-description="輸入助聽器廠牌名稱"/></th><th>醫器級數、規格</th><th>申請商</th><th>製造商</th></tr>
       	</thead>
       	<tbody>
             <xsl:for-each select="dataList">
@@ -212,20 +234,24 @@ section#link {
     </body>
     </html>
     <script>
-function myFunction() {
+function filterFunction() {
   // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
+  var input1, input2, filter1, filter2, table, tr, td1, td4, i, txtValue;
+  input1 = document.getElementById("permitInput");
+  input2 = document.getElementById("brandInput");
+  filter1 = input1.value.toUpperCase();
+  filter2 = input2.value.toUpperCase();
+  table = document.getElementById("dataTable");
   tr = table.getElementsByTagName("tr");
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i <xsl:text disable-output-escaping="yes">&lt;</xsl:text> tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1) {
+    td1 = tr[i].getElementsByTagName("td")[0];
+    td4 = tr[i].getElementsByTagName("td")[3];
+    if (td1 || td4) {
+      txtValue1 = td1.textContent || td1.innerText;
+      txtValue2 = td4.textContent || td4.innerText;
+      if (txtValue1.toUpperCase().indexOf(filter1) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1 <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> txtValue2.toUpperCase().indexOf(filter2) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
