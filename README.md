@@ -10,7 +10,7 @@
 
 ## 下載
 
-請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `G3300_full_x64.zip` 那個連結，這是對應目前大多數使用者 x64 架構作業系統的整合版本；如果想要自己手動下載第三方工具，例如要用於不同架構的作業系統，也可以用 `G3300.zip` 連結。
+請下載[最新版套件](https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest)，找 `G3300_full_x64.zip` 那個連結，這是對應目前大多數使用者 x64 架構作業系統的整合版本，解壓縮後[可以直接使用](#使用方法)；如果想要自己手動下載第三方工具，例如要用於不同架構的作業系統，也可以用 `G3300.zip` 連結並[手動準備相關環境](#安裝手動環境設定)。
 
 使用前記得要解壓縮。
 
