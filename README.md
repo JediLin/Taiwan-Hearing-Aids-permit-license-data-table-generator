@@ -6,7 +6,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator?style=for-the-badge)
 
-台灣衛生福利部食品藥物管理署在政府資料開放平台上，每七天會發布更新醫療器材許可證資料集。我寫了一小段批次檔，用來自動下載 XML 格式的資料集，並且利用 [XSL Transformations (XSLT)](https://www.w3.org/TR/xslt/) 技術，從中擷取屬於助聽器（次類別為 `G.3300 助聽器` 的那些），以便查詢檢索。
+台灣衛生福利部食品藥物管理署在政府資料開放平台上，每七天自動發布更新醫療器材許可證資料集。我寫了一小段批次檔，用來自動下載 XML 格式的最新版本資料集，並且利用 [XSL Transformations (XSLT)](https://www.w3.org/TR/xslt/) 技術，從中擷取屬於助聽器（次類別為 `G.3300 助聽器` 的那些），以便查詢檢索。
 
 註：如果需要各種身心障礙者輔具費用補助項目（**社政輔具**）的醫材許可證資料，請用[台灣社政輔具常見醫療器材許可證字號資料表產生器](https://github.com/JediLin/Taiwan-Assistive-Technology-medical-device-permit-license-data-table-generator)，產製涵蓋更多醫材類別的資料表。
 
