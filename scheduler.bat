@@ -17,7 +17,7 @@ IF NOT EXIST "silent_update.bat" (
     echo 錯誤：缺少 silent_update.bat 檔案，請檢查資料表產生器檔案是否完整。現在即將使用預設瀏覽器帶您前往資料表產生器下載網頁，請按任意鍵繼續……
   )
   pause > nul
-  start "" "https://github.com/JediLin/Taiwan-Assistive-Technology-medical-device-permit-license-data-table-generator/releases/latest"
+  start "" "https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest"
   exit
 )
 IF NOT EXIST "G3300.xsl" (
