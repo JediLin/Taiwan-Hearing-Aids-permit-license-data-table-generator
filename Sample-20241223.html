@@ -1,0 +1,3614 @@
+<!DOCTYPE html><html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>助聽器醫療器材許可證字號資料表</title>
+<style>
+:root {
+  --background: hsl(210,6%,12%);
+  --currentline: hsl(236,10%,33%);
+  --selection: hsl(216,8%,24%);
+  --selectionmark: hsla(140,2%,77%,80%);
+  --foreground: hsl(140,2%,77%);
+  --comment: hsl(120,0%,59%);
+  --red: hsl(0,50%,60%);
+  --orange: hsl(24,65%,62%);
+  --yellow: hsl(39,80%,69%);
+  --green: hsl(65,39%,57%);
+  --aqua: hsl(171,28%,64%);
+  --blue: hsl(207,31%,62%);
+  --purple: hsl(286,22%,65%);
+  --nightbackground: hsl(210,6%,12%);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: hsl(0,0%,98%);
+    --currentline: hsl(0,0%,92%);
+    --selection: hsl(0,0%,82%);
+    --selectionmark: hsla(228,8%,24%,80%);
+    --foreground: hsl(228,8%,24%);
+    --comment: hsl(231,4%,64%);
+    --red: hsl(345,69%,49%);
+    --orange: hsl(22,78%,49%);
+    --yellow: hsl(46,60%,48%);
+    --green: hsl(140,62%,36%);
+    --aqua: hsl(199,100%,43%);
+    --blue: hsl(222,78%,52%);
+    --purple: hsl(263,86%,60%);
+    --nightbackground: hsl(210,6%,12%);
+  }
+}
+@media (prefers-contrast: less) {
+  :root {
+    --background: hsl(44,87%,94%);
+    --currentline: hsl(45,64%,91%);
+    --selection: hsl(46,42%,88%);
+    --selectionmark: hsla(196,13%,45%,80%);
+    --foreground: hsl(196,13%,45%);
+    --comment: hsl(180,7%,60%);
+    --red: hsl(1,71%,52%);
+    --orange: hsl(18,80%,44%);
+    --yellow: hsl(45,100%,35%);
+    --green: hsl(68,100%,30%);
+    --aqua: hsl(175,59%,40%);
+    --blue: hsl(205,69%,49%);
+    --purple: hsl(237,43%,60%);
+    --nightbackground: hsl(210,6%,12%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(210,6%,12%);
+    --currentline: hsl(236,10%,33%);
+    --selection: hsl(216,8%,24%);
+    --selectionmark: hsla(140,2%,77%,80%);
+    --foreground: hsl(140,2%,77%);
+    --comment: hsl(120,0%,59%);
+    --red: hsl(0,50%,60%);
+    --orange: hsl(24,65%,62%);
+    --yellow: hsl(39,80%,69%);
+    --green: hsl(65,39%,57%);
+    --aqua: hsl(171,28%,64%);
+    --blue: hsl(207,31%,62%);
+    --purple: hsl(286,22%,65%);
+    --nightbackground: hsl(210,6%,12%);
+  }
+}
+@media (prefers-contrast: more) {
+  :root {
+    --background: hsl(0,0%,0%);
+    --currentline: hsl(0,0%,16%);
+    --selection: hsl(0,0%,26%);
+    --selectionmark: hsla(0,0%,92%,80%);
+    --foreground: hsl(0,0%,92%);
+    --comment: hsl(120,1%,59%);
+    --red: hsl(358,62%,57%);
+    --orange: hsl(26,77%,59%);
+    --yellow: hsl(47,77%,59%);
+    --green: hsl(68,55%,54%);
+    --aqua: hsl(169,39%,60%);
+    --blue: hsl(213,56%,67%);
+    --purple: hsl(281,45%,72%);
+    --nightbackground: hsl(210,6%,12%);
+  }
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+h1, .center {
+  text-align: center;
+}
+a {
+  color: var(--green);
+  text-decoration: underline;
+}
+a:link {
+  color: var(--green);
+  text-decoration: underline;
+}
+a:visited {
+  color: var(--orange);
+  text-decoration: underline;
+}
+a:active {
+  color: var(--red);
+}
+a:hover {
+  color: var(--red);
+}
+label {
+  color: var(--comment);
+}
+input {
+  background: var(--yellow);
+}
+input:placeholder-shown {
+  background: var(--background);
+}
+input::placeholder {
+  color: var(--yellow);
+}
+input:focus, textarea:focus {
+  color: var(--foreground);
+  background: var(--currentline);
+}
+input:focus-visible {
+  outline: 3px solid var(--yellow);
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--foreground);
+  margin: 0 auto;
+}
+table thead th, table tbody td {
+  border: 1px solid;
+  padding: 5px;
+  max-width: 20em;
+  word-wrap: break-word;
+}
+table thead th {
+  background: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+table + * {
+  padding-top: 1em;
+}
+table tbody tr:nth-child(2n) td {
+  background: var(--selection);
+}
+table tbody tr:nth-child(2n+1) td {
+  background: var(--currentline);
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto 0.3fr auto 1fr;
+  gap: 2em;
+}
+section#about {
+  grid-column: 2;
+}
+section#link {
+  grid-column: 4;
+}
+      </style>
+</head>
+<body>
+<h1>助聽器醫療器材許可證字號暨相關資訊</h1>
+<table id="dataTable">
+<caption>製表日期：2024 年 12 月 23 日</caption>
+<thead><tr>
+<th>許可證字號<br><label for="permitInput">快查：</label><input type="text" id="permitInput" onkeyup="filterFunction()" placeholder="可只輸入數字部分" title="可只輸入數字部分" aria-description="可只輸入許可證字號的數字部分">
+</th>
+<th>註銷狀態</th>
+<th>有效日期</th>
+<th>品名<br><label for="brandInput">快查：</label><input type="text" id="brandInput" onkeyup="filterFunction()" placeholder="輸入助聽器廠牌名稱" title="輸入助聽器廠牌名稱" aria-description="輸入助聽器廠牌名稱">
+</th>
+<th>醫器級數、規格</th>
+<th>申請商</th>
+<th>製造商</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>衛部醫器陸輸壹字第001945號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/08/07<br>｜<br>2023/08/07</td>
+<td>聽不累 氣導式助聽器 (未滅菌)<br>TrueOpen Air Conduction Hearing Aid(Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聖基創意股份有限公司<br>地址：新北市板橋區雙十路2段48號8樓</td>
+<td>LIVING SCIENCE CO., LTD.<br>廠址：NO. 1428 XIANG JIANG ROAD, SUZHOU NEW DISTRICT, SUZHOU CITY 215129, JIANGSU PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第001975號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/09/05<br>｜<br>2023/09/05</td>
+<td>科克蘭助聽器 (未滅菌)<br>KIRKLAND SIGNATURE HEARING AIDS (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>GN RESOUND CHINA LTD.<br>廠址：15 CHUANG XIN ROAD, CTP AREA, XIAMEN 361006, FUJIAN PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第001980號</td>
+<td>2022/06/07<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2013/09/09<br>｜<br>2018/07/17</td>
+<td>易耳通助聽器 (未滅菌)<br>EasyHear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>SEVECO GLOBAL LIMITED<br>廠址：1 JIANXIANG STREET, HANXISHUI, CHASHAN TOWN, DONGGUAN, GUANGDONG, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第001980號</td>
+<td>2022/06/07<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2013/09/09<br>｜<br>2018/07/17</td>
+<td>易耳通助聽器 (未滅菌)<br>EasyHear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>LOGITAL CO. LIMITED<br>廠址：ROOM 901-902, 9/F NATHAN CENTRE, 580G-K NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG<br><br>製造廠國別：HK</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002015號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/10/30<br>｜<br>2023/10/30</td>
+<td>"聽不累" 助聽器(未滅菌)<br>TOPlay Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>帝寶生醫股份有限公司<br>地址：新北市中和區建一路186號9樓之3</td>
+<td>LIVING SCIENCE CO., LTD.<br>廠址：NO. 1428 XIANG JIANG ROAD, SUZHOU NEW DISTRICT, SUZHOU CITY 215129, JIANGSU PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002058號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2014/01/22<br>｜<br>2019/01/22</td>
+<td>“新聲”氣導式助聽器 (未滅菌)<br>“NewSound”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>升音實業有限公司<br>地址：台中市西區博館路240號1樓</td>
+<td>XIAMEN NEWSOUND TECHNOLOGY CO., LTD.<br>廠址：S302 WEIYE BUILDING, XIAMEN PIONEERING PARK FOR OVERSEA CHINESE SCHOLARS, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002077號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2014/02/25<br>｜<br>2019/02/25</td>
+<td>“美律”氣導式助聽器 (未滅菌)<br>“Merry” air conduction hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>美律實業股份有限公司<br>地址：臺中市南屯區工業區23路22號</td>
+<td>MERRY ELECTRONICS (SHENZHEN) CORPORATE LIMITED.<br>廠址：NO. 50, MEIBAO ROAD, DALANG, LONGHUA NEW DISTRICT, SHENZHEN, GUANGDONG 518109, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002104號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2014/04/03<br>｜<br>2024/04/03</td>
+<td>"元皓" 助聽器 (未滅菌)<br>"Digisine" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元皓能源股份有限公司高雄分公司<br>地址：高雄市前鎮區新生路248-26號4樓</td>
+<td>HUIZHOU SANHUA INDUSTRIAL CO., LTD<br>廠址：ZONE 14, ZHONGKAI HI-TECH DEVELOPMENT ZONE, HUIZHOU CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002365號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2015/04/13<br>｜<br>2020/04/13</td>
+<td>"斯搭刻" 氣導式助聽器 (未滅菌)<br>"Starkey" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>僑聲實業有限公司<br>地址：台中市中區雙十路一段1號8樓之1</td>
+<td>STARKEY CHINA HEARING AID (SUZHOU) CO. LTD.<br>廠址：C2 BLOCK, 128, HONGRE RD SIP SUZHOU, JIANGSU PROVINCE, CHINA 215006<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002385號</td>
+<td>2022/08/05<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2015/05/07<br>｜<br>2020/05/07</td>
+<td>"叡聲達" 助聽器 (未滅菌)<br>"GN ReSound" Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路656號</td>
+<td>GN RESOUND CHINA LTD.<br>廠址：15 CHUANG XIN ROAD, CTP AREA, XIAMEN 361006, FUJIAN PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002392號</td>
+<td>2022/06/16<br>已註銷<br>自行鍵入</td>
+<td class="center">2015/05/13<br>｜<br>2020/05/13</td>
+<td>"臺大機電" 助聽器 (未滅菌)<br>"Tai. Dah. Electric machinery" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>臺大機電自動控制有限公司<br>地址：臺中市太平區中山路四段160號1樓</td>
+<td>ZHUJI KANGHAO HEARING AIDS BUSINESS DEPARTMENT<br>廠址：NO. 1568-1, BUILDING 71, HUADONG AUTOMOBILE PARTS PLUMBING AND HEATING TOWN, DIANKOU TOWN, ZHUJI CITY, ZHEJIANG, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第002618號</td>
+<td>2023/08/17<br>已註銷<br>公司歇業</td>
+<td class="center">2016/01/18<br>｜<br>2021/01/18</td>
+<td>"旭重" 助聽器 (未滅菌)<br>"Arrow" Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>旭重企業有限公司<br>地址：新北市汐止區新興路83之3號3樓</td>
+<td>JINGHAO ENTERPRISE SHARES COMPANY LIMITED.<br>廠址：NO.1004, GUTANGAO, INDUSTRIAL AREA, HUIZHOU, GUANGDONG, CHINA.<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003258號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/10/30<br>｜<br>2022/10/30</td>
+<td>"誠康" 助聽器 (未滅菌)<br>"Cheng Kang" Hearing aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>誠康實業有限公司<br>地址：新北市土城區延平街67號7樓</td>
+<td>SHENZHEN ZHONGDE HEARINGTECHNOLOGY CO., LTD<br>廠址：NO, 7, BUILDING 2, QILU 1ST RD, SHANGNAN INDUSTRY ZONE, BAOAN DISTRICT, SHENZHEN CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003263號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/11/03<br>｜<br>2022/11/03</td>
+<td>易耳通助聽器(未滅菌)<br>Easy Hear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>SEVECO GLOBAL LIMITED<br>廠址：1 JIANXIANG STREET, HANXISHUI, CHASHAN TOWN, DONGGUAN, GUANGDONG, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003263號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/11/03<br>｜<br>2022/11/03</td>
+<td>易耳通助聽器(未滅菌)<br>Easy Hear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>LOGITAL CO. LIMITED<br>廠址：ROOM 901-902, 9/F NATHAN CENTRE, 580G-K NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG<br><br>製造廠國別：HK</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003565號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/09/27<br>｜<br>2023/09/27</td>
+<td>"瑞士雅歌" 氣導式助聽器 (未滅菌)<br>"Argosy" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003566號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/09/27<br>｜<br>2028/09/27</td>
+<td>"瑞士峰力" 氣導式助聽器 (未滅菌)<br>"Phonak" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003571號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/10/15<br>｜<br>2023/10/15</td>
+<td>"優利康" 氣導式助聽器 (未滅菌)<br>"Unitron" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003598號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/11/13<br>｜<br>2023/11/13</td>
+<td>布力歐 助聽器 (未滅菌)<br>Brio HA Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003713號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/03/11<br>｜<br>2024/03/11</td>
+<td>"歐仕達" 氣導式助聽器 (未滅菌)<br>"Austar" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>薩摩亞商美律富聆股份有限公司台灣分公司<br>地址：新北市新店區北新路三段205號15樓</td>
+<td>AUSTAR HEARING SCIENCE&amp;TECHNOLOGY (XIAMEN) CO., LTD.<br>廠址：RM201(1), NO.2, GAOQI SOUTH 12TH ROAD, PILOT FREE TRADE ZONE (XIAMEN), HULI DISTRICT, XIAMEN CITY, 361006, FUJIAN PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第003732號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/03/20<br>｜<br>2024/03/20</td>
+<td>"萊卡"助聽器 (未滅菌)<br>"LAICA" hearing amplifier (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>萊卡環球股份有限公司<br>地址：新北市新店區北新路三段207-1號2樓</td>
+<td>Xiamen Newsound Technology Co., Ltd<br>廠址：1st and 2nd Floor, No. 13 of Xiangyue Road, Torch Hi-Tech Industrial Development Zone, Xiang'An District, Xiamen, China<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004110號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/03/12<br>｜<br>2025/03/12</td>
+<td>"瑞士雅歌" 助聽器(未滅菌)<br>"Vista" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004126號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/03/31<br>｜<br>2025/03/31</td>
+<td>優利康助聽器 (未滅菌)<br>"Unitron" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器,以下空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004272號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/08/03<br>｜<br>2025/08/03</td>
+<td>"建聲" 氣導式助聽器 (未滅菌)<br>"JEN SOUND" Air conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>建聲實業有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之2</td>
+<td>SONOVA HEARING (SUZHOU) CO. LTD.<br>廠址：NO. 78 QI MING ROAD, COMPREHENSIVE BONDED ZONE, SUZHOU INDUSTRIAL PARK, JIANGSU PROVINCE, 215126, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004486號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/04/09<br>｜<br>2026/04/09</td>
+<td>“微科”助聽器 (未滅菌)<br>"Starkey" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>僑聲實業有限公司<br>地址：臺中市中區雙十路一段1號8樓之１</td>
+<td>STARKEY (SUZHOU) HEARING TECHNOLOGY CO. LTD.<br>廠址：NO.1 SHENGAI ROAD SUZHOU INDUSTRIAL PARK SUZHOU JIANGSU 2515122 CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004488號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/04/13<br>｜<br>2026/04/13</td>
+<td>"洞見未來科技" 助聽器 (未滅菌)<br>"RelaJet Tech" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>洞見未來科技股份有限公司<br>地址：臺北市松山區南京東路4段150號8樓</td>
+<td>DONGGUAN TYMPHANY ACOUSTIC TECHNOLOGY CO. LTD.<br>廠址：LIUWU SECT, SANHENG ROAD, XINCHENG DISTRICT, SHEKKIT TOWN, DONGGUAN CITY, GUANGDONG PROVINCE, CHINA 523290<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004507號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/04/26<br>｜<br>2026/04/26</td>
+<td>"斯達克"助聽器(未滅菌)<br>"Starkey Laboratories" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：NO.1, SHENGAI ROAD., SUZHOU INDUSTRIAL PARK, SUZHOU, JIANGSU 215122, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004603號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/02/21<br>｜<br>2027/02/21</td>
+<td>“美樂迪” 助聽器(未滅菌)<br>“Melody” Hearing Aid(Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路4段191號2樓之1</td>
+<td>STARKEY (SUZHOU) HEARING TECHNOLOGY CO., LTD.<br>廠址：NO. 1 SHENGAI ROAD, SUZHOU INDUSTRIAL PARK, SUZHOU JIANGSU CHINA 215021<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004609號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/03/08<br>｜<br>2027/03/08</td>
+<td>“龍音” 氣導式助聽器 (未滅菌)<br>“LONG TONE” Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>龍音實業有限公司<br>地址：苗栗縣頭份市東庄里自強路150巷2-5號3樓</td>
+<td>AUSTAR HEARING SCIENCE &amp; TECHNOLOGY (XIAMEN) CO., LTD.<br>廠址：GROUND FLOOR AND THIRD FLOOR, BUILDING B8, BIOMEDICAL INDUSTRIAL PARK NO. 2064, WENGJIAO WEST ROAD, HAICANG DISTRICT, XIAMEN CITY, FUJIAN PROVINCE, 361022, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004640號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/05/25<br>｜<br>2027/05/25</td>
+<td>"井上" 氣導式助聽器 (未滅菌)<br>"Jingshang" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>井上醫療器材有限公司<br>地址：臺北市北投區知行路316巷20弄11號</td>
+<td>AUSTAR HEARING SCIENCE &amp; TECHNOLOGY (XIAMEN) CO., LTD.<br>廠址：GROUND FLOOR AND THIRD FLOOR, BUILDING B8, BIOMEDICAL INDUSTRIAL PARK NO. 2064, WENGJIAO WEST ROAD, HAICANG DISTRICT, XIAMEN CITY, FUJIAN PROVINCE, 361022, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004730號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/01/12<br>｜<br>2028/01/12</td>
+<td>"洞見未來科技" 助聽器 (未滅菌)<br>"RelaJet Tech" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>洞見未來科技股份有限公司<br>地址：臺北市松山區南京東路4段150號8樓</td>
+<td>洞見未來科技股份有限公司<br>廠址：臺北市松山區南京東路4段150號8樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器陸輸壹字第004730號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/01/12<br>｜<br>2028/01/12</td>
+<td>"洞見未來科技" 助聽器 (未滅菌)<br>"RelaJet Tech" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>洞見未來科技股份有限公司<br>地址：臺北市松山區南京東路4段150號8樓</td>
+<td>Dongguan Shunhefeng Electricity Co Ltd<br>廠址：No. 36, Shunxing 6 Road, Dajingtou Village, Dalang Town, Dongguan City, Guang Dong, China<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第005067號</td>
+<td>2022/06/07<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2014/02/19<br>｜<br>2019/02/19</td>
+<td>“威聲”助聽器 (未滅菌)<br>“WOEY SHERN” HEARING AID (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>威聲實業有限公司<br>地址：彰化縣彰化市磚瑤路152號1樓</td>
+<td>威聲實業有限公司<br>廠址：彰化縣彰化市磚瑤路152號1樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第005145號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2014/03/13<br>｜<br>2019/03/13</td>
+<td>“美律”氣導式助聽器 (未滅菌)<br>“Merry” air conduction hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>美律實業股份有限公司<br>地址：臺中市南屯區工業區23路22號</td>
+<td>衡欣醫療器材股份有限公司<br>廠址：台中市潭子區建國路3-2、5-2、7-3、9-3號<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第005707號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/06/05<br>｜<br>2025/06/05</td>
+<td>"理音" 助聽器 (未滅菌)<br>"RIONET" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>理音電子工業股份有限公司<br>地址：新北市林口區粉寮路1段98號1樓</td>
+<td>理音電子工業股份有限公司<br>廠址：新北市林口區粉寮路1段98號1樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第007071號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/01/04<br>｜<br>2023/01/04</td>
+<td>易耳通助聽器(未滅菌)<br>Easy Hear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>元皓能源股份有限公司臨廣加工區廠<br>廠址：高雄市前鎮區新生路248-26號4樓(臨廣園區B2棟4樓402廠房)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第007273號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/05/29<br>｜<br>2028/05/29</td>
+<td>耳寶 助聽器(未滅菌)<br>Mimitakara hearing aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元健大和直販事業股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>元皓能源股份有限公司臨廣加工區廠<br>廠址：高雄市前鎮區新生路248-26號4樓(臨廣園區B2棟4樓402廠房)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第007424號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/09/07<br>｜<br>2028/09/07</td>
+<td>“元皓” 助聽器 (未滅菌)<br>“Digisine” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元皓能源股份有限公司高雄分公司<br>地址：高雄市前鎮區新生路248-26號4樓</td>
+<td>元皓能源股份有限公司臨廣加工區廠<br>廠址：高雄市前鎮區新生路248-26號4樓(臨廣園區B2棟4樓402廠房)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第007424號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/09/07<br>｜<br>2028/09/07</td>
+<td>“元皓” 助聽器 (未滅菌)<br>“Digisine” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元皓能源股份有限公司高雄分公司<br>地址：高雄市前鎮區新生路248-26號4樓</td>
+<td>元皓能源股份有限公司高雄分公司<br>廠址：高雄市前鎮區新生路48-26號4樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第007588號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/12/25<br>｜<br>2028/12/25</td>
+<td>“元勛 耳寶”助聽器(未滅菌)<br>“Digimax Mimitakara” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>元皓能源股份有限公司臨廣加工區廠<br>廠址：高雄市前鎮區新生路248-26號4樓(臨廣園區B2棟4樓402廠房)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第007697號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/03/28<br>｜<br>2024/03/28</td>
+<td>威聲助聽器(未滅菌)<br>WOEY SHERN HEARING AID (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>威聲實業有限公司<br>地址：彰化縣彰化市磚?里磚?路152號1樓</td>
+<td>威聲實業有限公司<br>廠址：彰化縣彰化市市磚瑤里磚瑤路152號1樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第008205號</td>
+<td>2023/01/05<br>已廢止<br>自行鍵入</td>
+<td class="center">2020/02/21<br>｜<br>2025/02/21</td>
+<td>"歐克"助聽器(未滅菌)<br>"OKmeter"Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器,以下空白。</td>
+<td>訊映光電股份有限公司<br>地址：新竹市東區埔頂里公道五路二段91號、91號2至6樓</td>
+<td>訊映光電股份有限公司<br>廠址：新竹市東區埔頂里公道五路二段91號、91號2至6樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第009663號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/09/01<br>｜<br>2027/09/01</td>
+<td>"巨虹" 氣導式助聽器(未滅菌)<br>"CHIPHOPE" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>巨虹電子股份有限公司<br>地址：新北市中和區連城路258號9樓之1</td>
+<td>仁齊企業有限公司新莊廠<br>廠址：新北市新莊區幸福東路57號(1、2樓)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第009663號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/09/01<br>｜<br>2027/09/01</td>
+<td>"巨虹" 氣導式助聽器(未滅菌)<br>"CHIPHOPE" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>巨虹電子股份有限公司<br>地址：新北市中和區連城路258號9樓之1</td>
+<td>巨虹電子股份有限公司<br>廠址：新北市中和區連城路258號9樓之1<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器製壹字第009789號</td>
+<td>2024/09/06<br>已廢止<br>
+</td>
+<td class="center">2023/01/16<br>｜<br>2028/01/16</td>
+<td>"洞見未來科技"助聽器 (未滅菌)<br>"RelaJet Tech" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>洞見未來科技股份有限公司台北分公司<br>地址：臺北市松山區光復北路37號9樓之1(實際營業地址：10樓)</td>
+<td>洞見未來科技股份有限公司台北分公司<br>廠址：臺北市松山區光復北路37號9樓之1(實際營業地址：10樓)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第025348號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2014/01/21<br>｜<br>2019/01/21</td>
+<td>“美樂迪”骨導式聽覺植入系統<br>“MEDEL” BoneBridge BCI System</td>
+<td>2 級醫材<br>Audio Processor：Amadé BB, Implant：BCI601</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路四段191號2樓之1</td>
+<td>MED-EL Elektromedizinische Geräte GmbH<br>廠址：Furstenweg 77a, A-6020 Innsbruck, Austria<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第025348號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2014/01/21<br>｜<br>2019/01/21</td>
+<td>“美樂迪”骨導式聽覺植入系統<br>“MEDEL” BoneBridge BCI System</td>
+<td>2 級醫材<br>Audio Processor：Amadé BB, Implant：BCI601</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路四段191號2樓之1</td>
+<td>VIBRANT MED-EL HEARING TECHNOLOGY GMBH<br>廠址：FURSTENWEG 77 A-6020 INNSBRUCK, AUSTRIA<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第027138號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/03/16<br>｜<br>2025/03/16</td>
+<td>美樂迪骨導式聽覺植入系統<br>MEDEL Bonebridge BCI System</td>
+<td>3 級醫材<br>Audio Processor：Amadé BB, Implant：BCI 601。新增規格：詳如中文仿單核定本。註銷規格：Amade BB、BB Lift (1mm)，以下空白。</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>MED-EL Elektromedizinische Geräte GmbH<br>廠址：Furstenweg 77a, 6020 Innsbruck, Austria<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第029717號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/05/11<br>｜<br>2027/05/11</td>
+<td>美樂迪聲音處理器<br>MEDEL SAMBA BB Audio Processor</td>
+<td>2 級醫材<br>詳如中文仿單核定本</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>MED-EL Elektromedizinische Geräte GmbH<br>廠址：Furstenweg 77a, A-6020 Innsbruck, Austria<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第031193號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/08/01<br>｜<br>2028/08/01</td>
+<td>美樂迪骨導助聽系統<br>ADHEAR System</td>
+<td>2 級醫材<br>詳如中文仿單核定本</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>MED-EL Elektromedizinische Geräte GmbH<br>廠址：Furstenweg 77a, 6020 Innsbruck, Austria<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第034412號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/03/27<br>｜<br>2026/03/27</td>
+<td>美樂迪骨導式聽覺植入系統<br>MEDEL Bonebridge BCI 602 System</td>
+<td>2 級醫材<br>詳如中文仿單核定本。增加規格，詳如核定之中文說明書，以下空白。</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>MED-EL Elektromedizinische Geräte GmbH<br>廠址：Furstenweg 77a, 6020 Innsbruck, Austria<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第034695號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/07/08<br>｜<br>2026/07/08</td>
+<td>“科利耳”巴哈骨傳導式聲音處理器<br>“Cochlear” Baha 5 Sound Processors and Accessories</td>
+<td>2 級醫材<br>詳如核定之中文說明書</td>
+<td>科利耳有限公司<br>地址：臺北市內湖區內湖路1段68號10樓(820室)</td>
+<td>COCHLEAR BONE ANCHORED SOLUTIONS AB<br>廠址：KONSTRUKTIONSVAGEN 14, SE-435 33 MOLNLYCKE, SWEDEN<br><br>製造廠國別：SE</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第034704號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/07/13<br>｜<br>2026/07/13</td>
+<td>美樂迪聲音處理器<br>MED-EL SAMBA 2 BB Audio Processor</td>
+<td>2 級醫材<br>Samba 2 BB</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>MED-EL Elektromedizinische Geräte GmbH<br>廠址：Furstenweg 77a, 6020 Innsbruck, Austria<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸字第035913號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/09/27<br>｜<br>2027/09/27</td>
+<td>“科利耳”巴哈麥克斯骨傳導聲音處理器<br>“Cochlear” Baha 6 Max Sound Processor and Accessories</td>
+<td>2 級醫材<br>詳如核定之中文說明書</td>
+<td>科利耳有限公司<br>地址：臺北市內湖區內湖路1段68號10樓(820室)</td>
+<td>COCHLEAR BONE ANCHORED SOLUTIONS AB<br>廠址：KONSTRUKTIONSVAGEN 14, SE-435 33 MOLNLYCKE, SWEDEN<br><br>製造廠國別：SE</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第013370號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/09/03<br>｜<br>2023/09/03</td>
+<td>“科斯爾奇”氣導式助聽器 (未滅菌)<br>“Coselgi” Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>濰樂聽力股份有限公司<br>地址：新北市中和區中和路366號6樓之1</td>
+<td>COSELGI A/S<br>廠址：NYMOELLEVEJ 6, DK-3540 LYNGE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第013452號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/09/27<br>｜<br>2023/09/27</td>
+<td>“斯達克”氣導式助聽器 (未滅菌)<br>“Starkey” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>僑聲實業有限公司<br>地址：臺中市中區雙十路一段1號8樓之１</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：STARKEY DE MEXICO, S. A. DE C. V. CALLE NOTE 7 NUMERO LOTE 2Y 3. ENTRE DIAGONAL LORENZO DE LA GARZA PONIENTE 2. COLONIA CIUDAD INDUSTRIAL. H. MATAMOROS, TAMAULIPAS. CP87499 MEXICO<br><br>製造廠國別：MX</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第013521號</td>
+<td>2022/08/05<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2013/10/23<br>｜<br>2018/10/23</td>
+<td>“麥可松”助聽器 (未滅菌)<br>“Microson” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美得聲股份有限公司<br>地址：高雄市前金區中華三路23之2號</td>
+<td>MICROSON S.A.<br>廠址：PERE IV. 160 08005 BARCELONA SPAIN<br><br>製造廠國別：ES</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第013718號</td>
+<td>2015/03/19<br>已註銷<br>依藥事法第97條規定</td>
+<td class="center">2013/12/24<br>｜<br>2018/12/24</td>
+<td>“優莫尼克”氣導助聽器 (未滅菌)<br>“Neuromonics”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>NEUROMONICS PTY LTD.<br>廠址：UNIT 9, 12 MARS RD, LANE COVE, NSW 2066, AUSTRALIA<br><br>製造廠國別：AU</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第013886號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2014/02/26<br>｜<br>2024/02/26</td>
+<td>微科 助聽器 (未滅菌)<br>"STARKEY" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>僑聲實業有限公司<br>地址：臺中市中區雙十路一段1號8樓之１</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：6600-6700 WASHINGTON AVE. SOUTH EDEN PRAIRIE, MN 55344 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第013971號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2014/03/19<br>｜<br>2019/03/19</td>
+<td>“總安”恩美助聽器 (未滅菌)<br>“Tonan”A&amp;M hearing aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>總安企業有限公司<br>地址：嘉義市東區書院里中山路545號1樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第014027號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2014/04/07<br>｜<br>2024/04/07</td>
+<td>“普耳通”氣導式助聽器 (未滅菌)<br>“Puretone” Air Conduction Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>建聲實業有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之2</td>
+<td>PURETONE LTD.<br>廠址：9-10 HENLEY BUSINESS PARK, TRIDENT CLOSE, MEDWAY CITY ESTATE, ROCHESTER, KENT. ME2 4FR, UNITED KINGDOM<br><br>製造廠國別：GB</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第014328號</td>
+<td>2022/06/16<br>已註銷<br>自行鍵入</td>
+<td class="center">2014/07/15<br>｜<br>2019/07/15</td>
+<td>“承輝” 雷克斯頓氣導式助聽器 (未滅菌)<br>“T-Rex” Rexton air conduction hearing aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>承輝聽語有限公司<br>地址：臺中市南屯區大墩路812號3樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第014467號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2014/08/29<br>｜<br>2024/08/29</td>
+<td>布力歐 助聽器 (未滅菌)<br>Brio HA Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND.<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第014560號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2014/10/13<br>｜<br>2024/10/13</td>
+<td>"泉泓"助聽器(未滅菌)<br>"HornTech" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>泉泓生活科技股份有限公司<br>地址：新北市板橋區漢生東路1號(2樓)</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：6700 WASHINGTON AVENUE SOUTH EDEN PRAIRIE, MINNESOTA 55344 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第014973號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2015/03/06<br>｜<br>2020/03/06</td>
+<td>"晶體" 助聽器 (未滅菌)<br>"Transistor" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>升音實業有限公司<br>地址：台中市西區博館路240號1樓</td>
+<td>AB TRANSISTOR SWEDEN<br>廠址：BERGKALLAVAGEN 23. 192 79 SOLLENTUNA SWEDEN<br><br>製造廠國別：SE</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015043號</td>
+<td>2022/06/17<br>已註銷<br>許可證已逾有效期;;自行鍵入</td>
+<td class="center">2015/03/26<br>｜<br>2020/03/26</td>
+<td>"侑聲" 助聽器 (未滅菌)<br>"Yoo sound" hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>侑聲企業社<br>地址：南投縣竹山鎮山崇里集山路二段89號</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015081號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/04/08<br>｜<br>2025/04/08</td>
+<td>"柏納峰"氣導式助聽器 (未滅菌)<br>"Bernafon" Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smørum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015081號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/04/08<br>｜<br>2025/04/08</td>
+<td>"柏納峰"氣導式助聽器 (未滅菌)<br>"Bernafon" Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>DEMANT OPERATIONS POLAND SP.Z.O.O.<br>廠址：UL. LUBIESZYNSKA 59, 42, 72-006 MIERZYN, POLAND<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015082號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/04/08<br>｜<br>2025/04/08</td>
+<td>"奧迪康"助聽器(未滅菌)<br>"Oticon" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smørum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015082號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/04/08<br>｜<br>2025/04/08</td>
+<td>"奧迪康"助聽器(未滅菌)<br>"Oticon" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>DEMANT OPERATIONS POLAND SP.Z.O.O.<br>廠址：UL. LUBIESZYNSKA 59, 42, 72-006 MIERZYN, POLAND<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015099號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2015/04/13<br>｜<br>2020/04/13</td>
+<td>"索利康" 氣導式助聽器 (未滅菌)<br>"Sonic AG" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>薩摩亞商美律富聆股份有限公司台灣分公司<br>地址：新北市新店區北新路3段205號15樓</td>
+<td>SONIC AG<br>廠址：TILSTEDVEJ 73 7700 THISTED, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015107號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2015/04/14<br>｜<br>2020/04/14</td>
+<td>"優利康" 氣導式助聽器 (未滅菌)<br>"Unitron" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>薩摩亞商美律富聆股份有限公司台灣分公司<br>地址：新北市新店區北新路3段205號15樓</td>
+<td>UNITRON HEARING GMBH<br>廠址：LAUBISRUTISTRASSE 28 CH-8712 STAFA SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015325號</td>
+<td>2022/06/07<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2015/06/10<br>｜<br>2020/06/10</td>
+<td>"旺新"助聽器(未滅菌)<br>"Features Innovation" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>旺新視界股份有限公司<br>地址：新北市新店區環河路32號13樓之2</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015593號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/08/20<br>｜<br>2025/08/20</td>
+<td>"索尼克"助聽器(未滅菌)<br>"Sonic" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SONIC AG<br>廠址：MORGENSTRASSE 131B, CH-3018 BERNE, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015593號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/08/20<br>｜<br>2025/08/20</td>
+<td>"索尼克"助聽器(未滅菌)<br>"Sonic" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smorum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015699號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/09/24<br>｜<br>2025/09/24</td>
+<td>"奧迪康"助聽器(未滅菌)<br>"Oticon" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smorum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015699號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/09/24<br>｜<br>2025/09/24</td>
+<td>"奧迪康"助聽器(未滅菌)<br>"Oticon" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>OTICON A/S<br>廠址：U1. LUBIESZYNSKA 59, MIERZYN, 72-006 SZCZECIN, POLAND<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015906號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/11/30<br>｜<br>2025/11/30</td>
+<td>"豐你耳"助聽器(未滅菌)<br>"Phonic Ear" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>PHONIC EAR A/S<br>廠址：KONGEBAKKEN 9, DK-2765 SMORUM, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015993號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/12/18<br>｜<br>2025/12/18</td>
+<td>"英得通" 助聽器 (未滅菌)<br>"Interton" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣維膜股份有限公司<br>地址：臺北市大同區南京西路22號4樓</td>
+<td>INTERTON A/S<br>廠址：LAUTRUPBJERG 7. DK-2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015994號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/12/18<br>｜<br>2025/12/18</td>
+<td>"貝而通" 助聽器 (未滅菌)<br>"Beltone" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣維膜股份有限公司<br>地址：臺北市大同區南京西路22號4樓</td>
+<td>BELTONE A/S<br>廠址：LAUTRUPJERP 7 DK-2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第015998號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2015/12/18<br>｜<br>2025/12/18</td>
+<td>"豐您耳" 助聽器 (未滅菌)<br>"Phonic Ear" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>濰樂聽力股份有限公司<br>地址：新北市中和區中和路366號6樓之1</td>
+<td>PHONIC EAR A/S<br>廠址：KONGEBAKKEN 9, DK-2765 SMORUM, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016184號</td>
+<td>2023/08/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2016/02/23<br>｜<br>2021/02/23</td>
+<td>"瑞聲"助聽器(未滅菌)<br>"GN ReSound" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>佳音聽力有限公司<br>地址：台北市中山區民權西路27號10樓之1</td>
+<td>GN RESOUND A/S<br>廠址：LAUTRUPBJERG 7, 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016228號</td>
+<td>2023/08/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2016/03/04<br>｜<br>2021/03/04</td>
+<td>"德音"助聽器(未滅菌)<br>"INTERTON" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>佳音聽力有限公司<br>地址：台北市中山區民權西路27號10樓之1</td>
+<td>INTERTON (GN RESOUND AS)<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016350號</td>
+<td>2023/09/08<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2016/03/31<br>｜<br>2021/03/31</td>
+<td>"佳聲" 紐伊兒助聽器 (未滅菌)<br>"Hearton" NuEar Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>佳聲企業有限公司<br>地址：台北市大安區羅斯福路三段293號4樓之3</td>
+<td>STARKEY HEARING TECHNOLOGIES<br>廠址：6600-6700 WASHINGTON AVENUE SOUTH EDEN PRAIRIE, MINNESOTA U.S.A. 55344<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016414號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2016/04/18<br>｜<br>2026/04/18</td>
+<td>瑞斯頓 氣導式助聽器 (未滅菌)<br>REXTON Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016477號</td>
+<td>2023/09/23<br>已註銷<br>自行鍵入</td>
+<td class="center">2016/04/29<br>｜<br>2021/04/29</td>
+<td>"旺新" 助聽器 (未滅菌)<br>"Features Innovation" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>旺新視界股份有限公司<br>地址：新北市新店區環河路32號13樓之2</td>
+<td>SIVANTOS K.K.<br>廠址：5-29-15 SAGAMIOHNO, MINAMI-KU, SAGAMIHARA-SHI, KANAGAWA, JAPAN<br><br>製造廠國別：JP</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016515號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2016/05/11<br>｜<br>2026/05/11</td>
+<td>"伯納峰" 氣導助聽器 (未滅菌)<br>"Bernafon" Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>濰樂聽力股份有限公司<br>地址：新北市中和區中和路366號6樓之1</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smørum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016515號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2016/05/11<br>｜<br>2026/05/11</td>
+<td>"伯納峰" 氣導助聽器 (未滅菌)<br>"Bernafon" Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>濰樂聽力股份有限公司<br>地址：新北市中和區中和路366號6樓之1</td>
+<td>DEMANT OPERATIONS POLAND SP.Z.O.O.<br>廠址：UL. LUBIESZYNSKA 59, 42, 72-006 MIERZYN, POLAND<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016520號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2016/05/12<br>｜<br>2026/05/12</td>
+<td>"桑尼克" 助聽器 (未滅菌)<br>"Sonic" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smørum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016520號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2016/05/12<br>｜<br>2026/05/12</td>
+<td>"桑尼克" 助聽器 (未滅菌)<br>"Sonic" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科林國際助聽器股份有限公司<br>地址：臺北市中正區忠孝西路1段50號17樓之4</td>
+<td>DEMANT OPERATIONS POLAND SP.Z.O.O.<br>廠址：UL. LUBIESZYNSKA 59, 42, 72-006 MIERZYN, POLAND<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016571號</td>
+<td>2023/09/08<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2016/05/23<br>｜<br>2021/05/23</td>
+<td>"比優通" 助聽器 (未滅菌)<br>"Puretone" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>淳新企業有限公司<br>地址：高雄市前金區中山二路577號6樓之1</td>
+<td>PURETONE PLC<br>廠址：9-10 HENLEY BUSINESS PARK, TRIDENT CLOSE, MEDWAY CITY ESTATE, ROCHESTER, KENT. ME2 4FR ENGLAND<br><br>製造廠國別：GB</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016607號</td>
+<td>2023/08/15<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2016/06/02<br>｜<br>2021/06/02</td>
+<td>"僑聲" 助聽器 (未滅菌)<br>"Chiaoson" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>僑聲實業有限公司<br>地址：台中市中區雙十路一段1號8樓之1</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016780號</td>
+<td>2023/10/12<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2016/07/14<br>｜<br>2021/07/14</td>
+<td>"西萬拓" 愛美助聽器 (未滅菌)<br>"Sivantos" A &amp; M Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市中山區復興北路164號7樓之1</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016846號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2016/07/29<br>｜<br>2021/07/29</td>
+<td>"聲得" 助聽器 (未滅菌)<br>"Prosonichos" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聲得有限公司<br>地址：台北市中正區襄陽路6號10樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第016950號</td>
+<td>2020/03/19<br>已註銷<br>註銷藥商許可執照</td>
+<td class="center">2016/09/01<br>｜<br>2021/09/01</td>
+<td>"峯力" 氣導式助聽器 (未滅菌)<br>"Phonak" Air conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>妙音醫療器材有限公司<br>地址：臺北市信義區大道路103號</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017037號</td>
+<td>2019/01/18<br>已註銷<br>公司歇業</td>
+<td class="center">2016/09/30<br>｜<br>2021/09/30</td>
+<td>"音特耳" 助聽器 (未滅菌)<br>"Interton" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>虹韻醫療器材股份有限公司<br>地址：台北市中正區衡陽路２０號４樓</td>
+<td>INTERTON A/S<br>廠址：LAUTRUPBJERG 7. DK-2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017064號</td>
+<td>2023/09/23<br>已註銷<br>自行鍵入</td>
+<td class="center">2016/10/07<br>｜<br>2021/10/07</td>
+<td>科克蘭 助聽器 (未滅菌)<br>Kirkland Signature hearing aids (non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路656號</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017067號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2016/10/12<br>｜<br>2026/10/12</td>
+<td>"瑞士峰力" 氣導式助聽器 (未滅菌)<br>"PHONAK" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017068號</td>
+<td>2023/08/10<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2016/10/12<br>｜<br>2021/10/12</td>
+<td>"瑞士雅歌" 氣導式助聽器 (未滅菌)<br>"Argosy" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>SONOVA AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017273號</td>
+<td>2023/10/12<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2016/12/13<br>｜<br>2021/12/13</td>
+<td>"歐帝風" 氣導式助聽器 (未滅菌)<br>"Audifon" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市中山區復興北路164號7樓之1</td>
+<td>AUDIFON GMBH ＆ CO. KG<br>廠址：WERNER-VON-SIEMENS-STRASSE 2 D-99625 KILLEDA/THURINGIA, GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017309號</td>
+<td>2023/09/08<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2016/12/20<br>｜<br>2021/12/20</td>
+<td>"音德通" 助聽器 (未滅菌)<br>"Interton" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>薩摩亞商美律富聆股份有限公司台灣分公司<br>地址：新北市新店區北新路3段205號15樓</td>
+<td>INTERTON A/S<br>廠址：LAUTRUPBJERG 7. DK-2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017438號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/01/19<br>｜<br>2022/01/19</td>
+<td>叡聲達 助聽器 (未滅菌)<br>ReSound Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017442號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/01/20<br>｜<br>2022/01/20</td>
+<td>"元健大和" 助聽器 (未滅菌)<br>"Digibionic" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元健大和直販事業股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017552號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/03/02<br>｜<br>2022/03/02</td>
+<td>"班堤" 助聽器 (未滅菌)<br>"BHM-Tech" Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路4段191號2樓之1</td>
+<td>BHM-TECH PRODUKTIONSGESELLSCHAFT MBH<br>廠址：GRAFENSCHACHEN 242, 7423 GRAFENSCHACHEN, AUSTRIA<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017593號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/03/14<br>｜<br>2022/03/14</td>
+<td>"虹韻" 助聽器 (未滅菌)<br>"New Best" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>虹韻國際貿易股份有限公司<br>地址：臺北市中正區重慶南路1段99號2樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017863號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/05/19<br>｜<br>2022/05/19</td>
+<td>"信安" 助聽器 (未滅菌)<br>"Sin An" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>信安電氣企業行<br>地址：臺南市北區成功路2號5樓之30</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第017944號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/06/09<br>｜<br>2022/06/09</td>
+<td>"瑞士雅歌" 氣導式助聽器 (未滅菌)<br>"Argosy" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>UNITRON HEARING GMBH<br>廠址：LAUBISRUTISTRASSE 28 CH-8712 STAFA SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018062號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/07/14<br>｜<br>2022/07/14</td>
+<td>"瑞士峰力" 氣導式助聽器 (未滅菌)<br>"Phonak" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>PHONAK OPERATION CENTER VIETNAM CO. LTD.<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK THUAN AN TOWN BINH DUONG PROVINCE VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018177號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/08/11<br>｜<br>2022/08/11</td>
+<td>"久瑜" 助聽器 (未滅菌)<br>"JEOU YU" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>久瑜企業有限公司<br>地址：新竹市北區中正路107號8樓11室</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018233號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/08/23<br>｜<br>2022/08/23</td>
+<td>"維膜" 氣導助聽器 (未滅菌)<br>"We hear" AC hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣維膜股份有限公司<br>地址：台北市大同區南京西路22號4樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018320號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/09/18<br>｜<br>2027/09/18</td>
+<td>"銳聲達" 助聽器 (未滅菌)<br>"ReSound" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018320號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/09/18<br>｜<br>2027/09/18</td>
+<td>"銳聲達" 助聽器 (未滅菌)<br>"ReSound" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018331號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/09/20<br>｜<br>2022/09/20</td>
+<td>"龍友" 助聽器 (未滅菌)<br>"Long Yo" hearing aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>龍友實業有限公司<br>地址：臺中市西屯區工業區一路二巷三號六樓之八</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28, AYER RAJIH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018337號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/09/20<br>｜<br>2022/09/20</td>
+<td>"西門子聽貝爾"助聽器 (未滅菌)<br>"SiemensBayaudio" Hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018446號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/10/24<br>｜<br>2022/10/24</td>
+<td>"旺新"助聽器(未滅菌)<br>"Features Innovation" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>旺新視界股份有限公司<br>地址：新北市新店區環河路32號13樓之2</td>
+<td>STARKEY JAPAN CO., LTD<br>廠址：3F 2-6-23 SHIN YOKOHAMA, KOHOKU-KU, YOKOHAMA, KANAGAWA, JAPAN.<br><br>製造廠國別：JP</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018490號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/11/13<br>｜<br>2027/11/13</td>
+<td>"瑞士峰力" 氣導式助聽器 (未滅菌)<br>"Phonak" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operation Center Vietnam Co., Ltd<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK THUAN AN TOWN BINH DUONG PROVINCE VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018544號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/11/23<br>｜<br>2022/11/23</td>
+<td>"全國" 助聽器 (未滅菌)<br>"ALL DAY" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>全國實業有限公司<br>地址：臺北市中正區館前路6號5樓之1</td>
+<td>SIVANTOS GMBH<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018565號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/01<br>｜<br>2027/12/01</td>
+<td>"西門子聽貝爾" 助聽器 (未滅菌)<br>"SiemensBayaudio" Hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018572號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/04<br>｜<br>2027/12/04</td>
+<td>"虹韻國際" 助聽器 (未滅菌)<br>"New Best International" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>虹韻國際貿易股份有限公司<br>地址：臺北市中正區重慶南路1段99號2樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018582號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/06<br>｜<br>2027/12/06</td>
+<td>“維膜”助聽器 (未滅菌)<br>“We hear” Hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣維膜股份有限公司<br>地址：臺北市大同區南京西路22號4樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018589號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/08<br>｜<br>2027/12/08</td>
+<td>"聲得" 助聽器(未滅菌)<br>"Prosonichos" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聲得有限公司<br>地址：臺北市中正區襄陽路6號10樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018599號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/12<br>｜<br>2027/12/12</td>
+<td>"宜林" 氣導式助聽器 (未滅菌)<br>"Earlink" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>宜林科技有限公司<br>地址：臺北市大同區長安西路53巷5號1樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018601號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/12/13<br>｜<br>2022/12/13</td>
+<td>統一助聽器(未滅菌)<br>"Tone-E" A&amp;M Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>統一助聽器行<br>地址：高雄市新興區中山一路200號3樓之2號</td>
+<td>SIVANTOS GMBH<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018606號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2017/12/14<br>｜<br>2022/12/14</td>
+<td>"龍友"助聽器 (未滅菌)<br>"Long Yo" hearing aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>龍友實業有限公司<br>地址：臺中市西屯區工業區一路二巷三號六樓之八</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018614號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/15<br>｜<br>2027/12/15</td>
+<td>"富聆" 助聽器 (未滅菌)<br>"New Care" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>薩摩亞商美律富聆股份有限公司台灣分公司<br>地址：新北市新店區北新路三段205號15樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018622號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/19<br>｜<br>2027/12/19</td>
+<td>"頌聆" 助聽器 (未滅菌)<br>"Song Ring" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>頌聆興業有限公司<br>地址：臺中市北區博館路88號7樓之1</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018631號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/20<br>｜<br>2027/12/20</td>
+<td>"大詠韻" 助聽器 (未滅菌)<br>" Sound Shine " A&amp;M Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>大詠韻企業社<br>地址：台南市東區崇善十一街12巷24號1樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018638號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/22<br>｜<br>2027/12/22</td>
+<td>"權威" 助聽器 (未滅菌)<br>"Proline"Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>權威實業有限公司<br>地址：臺北市中正區漢口街1段110號5樓之11</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018639號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/22<br>｜<br>2027/12/22</td>
+<td>"西萬拓" 愛美助聽器 (未滅菌)<br>"Sivantos" A &amp; M Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018651號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/26<br>｜<br>2027/12/26</td>
+<td>"久瑜" 助聽器 (未滅菌)<br>"JEOU YU" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>久瑜企業有限公司<br>地址：新竹市北區大同里中正路107號8樓之2</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018656號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/26<br>｜<br>2027/12/26</td>
+<td>"亞洲" 助聽器 (未滅菌)<br>"ASIA" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>亞洲電氣企業行<br>地址：高雄市三民區建國三路157號4樓之1</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018657號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2017/12/26<br>｜<br>2027/12/26</td>
+<td>"元健大和" 助聽器 (未滅菌)<br>"Digibionic" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元健大和直販事業股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018716號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/01/12<br>｜<br>2028/01/12</td>
+<td>瑞斯頓氣導式助聽器(未滅菌)<br>Rexton Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018717號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/01/12<br>｜<br>2028/01/12</td>
+<td>科克蘭助聽器(未滅菌)<br>Kirkland Signature Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018758號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/01/25<br>｜<br>2028/01/25</td>
+<td>"馨樺" 助聽器(未滅菌)<br>"SHING HUAH" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>馨樺有限公司<br>地址：台中市沙鹿區中山路420號1樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第018981號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/04/18<br>｜<br>2023/04/18</td>
+<td>"僑聲" 氣導式助聽器 (未滅菌)<br>"Chiaoson" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>僑聲實業有限公司<br>地址：臺中市中區雙十路一段1號8樓之１</td>
+<td>SIVANTOS PTE.LTD<br>廠址：18 TAI SENG STREET, #06-02, SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019039號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/05/11<br>｜<br>2028/05/11</td>
+<td>"雷斯頓" 助聽器(未滅菌)<br>"REXTON" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019142號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/06/06<br>｜<br>2028/06/06</td>
+<td>"音特" 助聽器 (未滅菌)<br>"Interton" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>虹韻國際貿易股份有限公司<br>地址：臺北市中正區重慶南路1段99號2樓</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019142號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/06/06<br>｜<br>2028/06/06</td>
+<td>"音特" 助聽器 (未滅菌)<br>"Interton" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>虹韻國際貿易股份有限公司<br>地址：臺北市中正區重慶南路1段99號2樓</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019210號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/06/21<br>｜<br>2023/06/21</td>
+<td>易耳通助聽器 (未滅菌)<br>Easy Hear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>LOGITAL CO. LIMITED<br>廠址：ROOM 605, 6/F NATHAN CENTRE, 580G-K NATHAN ROAD, MONGKOK, KOWLOON, HONG KONG<br><br>製造廠國別：HK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019471號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/08/09<br>｜<br>2023/08/09</td>
+<td>“德國博依” 耳掛型助聽器 (未滅菌)<br>“beurer” Behind-The-Ear-Hearing Amplifier (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>博佳康健股份有限公司<br>地址：臺北市中正區羅斯福路1段76號</td>
+<td>Beurer GmbH<br>廠址：Soflinger Strase 218, 89077 Ulm, Germany<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019615號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/09/17<br>｜<br>2028/09/17</td>
+<td>“元皓”助聽器(未滅菌)<br>“Digisine”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元皓能源股份有限公司高雄分公司<br>地址：高雄市前鎮區新生路248-26號4樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019646號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/09/27<br>｜<br>2023/09/27</td>
+<td>"瑞士雅歌" 氣導式助聽器 (未滅菌)<br>"Argosy" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operation Center Vietnam Co., Ltd<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK THUAN AN TOWN BINH DUONG PROVINCE VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019704號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/10/15<br>｜<br>2023/10/15</td>
+<td>"優利康" 氣導式助聽器 (未滅菌)<br>"Unitron" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operation Center Vietnam Co., Ltd<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK THUAN AN TOWN BINH DUONG PROVINCE VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019815號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/11/13<br>｜<br>2023/11/13</td>
+<td>布力歐 助聽器 (未滅菌)<br>Brio HA Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operation Center Vietnam Co., Ltd<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK THUAN AN TOWN BINH DUONG PROVINCE VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第019966號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2018/12/26<br>｜<br>2023/12/26</td>
+<td>"旺新"助聽器(未滅菌)<br>"Features Innovation" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>旺新視界股份有限公司<br>地址：新北市新店區環河路32號13樓之2</td>
+<td>SONOVA JAPAN CO., LTD.<br>廠址：2-5-8 HIGASHISHINAGAWA, SHINAGAWA-KU, TOKYO-TO 140-0002 JAPAN<br><br>製造廠國別：JP</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020196號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/03/15<br>｜<br>2029/03/15</td>
+<td>"威克斯" 氣導助聽器 (未滅菌)<br>"Widex" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>濰樂聽力股份有限公司<br>地址：新北市中和區中和路366號6樓之1</td>
+<td>WIDEX A/S<br>廠址：NYMOELLEVEJ 6, DK-3540, LYNGE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020196號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/03/15<br>｜<br>2029/03/15</td>
+<td>"威克斯" 氣導助聽器 (未滅菌)<br>"Widex" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>濰樂聽力股份有限公司<br>地址：新北市中和區中和路366號6樓之1</td>
+<td>WSAUD A/S<br>廠址：Nymøllevej 6 3540 Lynge Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020282號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/04/09<br>｜<br>2029/04/09</td>
+<td>"音特通"助聽器(未滅菌)<br>"Interton" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020282號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/04/09<br>｜<br>2029/04/09</td>
+<td>"音特通"助聽器(未滅菌)<br>"Interton" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020302號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/04/11<br>｜<br>2024/04/11</td>
+<td>"歐特麥吉斯" 助聽器 (未滅菌)<br>"Otometrics" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科舉顧問股份有限公司<br>地址：新北市新店區北新路三段221號10樓</td>
+<td>Natus Medical Denmark ApS<br>廠址：Horskatten 9, 2630 Taastrup, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020410號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/05/06<br>｜<br>2024/05/06</td>
+<td>"西萬拓" 艾曼助聽器 (未滅菌)<br>"Sivantos" A &amp; M Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>精俐有限公司<br>地址：新北市五股區五權七路12號7樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020423號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/05/08<br>｜<br>2024/05/08</td>
+<td>愛克斯氣導式助聽器(未滅菌)<br>Access Air Conduction Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>高境界生化科技國際股份有限公司<br>地址：臺北市信義區永吉路168號8樓</td>
+<td>ALPS INTERNATIONAL TECHNOLOGIES<br>廠址：ASHIRWAD COMPLEX, D-1, GREEN PARK, NEW DELHI – 110 016 INDIA<br><br>製造廠國別：IN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020474號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/05/22<br>｜<br>2029/05/22</td>
+<td>"悠爾" 助聽器 (未滅菌)<br>"NuEar" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路4段191號2樓之1</td>
+<td>STARKEY LABORATORIES INC<br>廠址：6700 WASHINGTON AVE SOUTH EDEN PRAIRIE, MN, 55344 USA<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020497號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/05/28<br>｜<br>2029/05/28</td>
+<td>“飛利浦”助聽器(未滅菌)<br>“Philips” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smørum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020497號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/05/28<br>｜<br>2029/05/28</td>
+<td>“飛利浦”助聽器(未滅菌)<br>“Philips” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>DEMANT OPERATIONS POLAND SP.Z.O.O.<br>廠址：UL. LUBIESZYNSKA 59, 42, 72-006 MIERZYN, POLAND<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020499號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/05/29<br>｜<br>2029/05/29</td>
+<td>"睿聲"助聽器(未滅菌)<br>"AudiBel" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：6700 WASHINGTON AVENUE SOUTH EDEN PRAIRIE, MINNESOTA 55344 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020521號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/06/04<br>｜<br>2029/06/04</td>
+<td>"西嘉" 助聽器 (未滅菌)<br>"Signia" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08, SINGAPORE 539775, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020599號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/06/28<br>｜<br>2029/06/28</td>
+<td>"瑞斯敦" 助聽器 (未滅菌)<br>" REXTON" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020802號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/08/29<br>｜<br>2024/08/29</td>
+<td>科克蘭氣導式助聽器 (未滅菌)<br>Kirkland Signature Air Conduction Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operations Center Vietnam Co., Ltd<br>廠址：No. 29A VSIP Street 8, Vietnam Singapore Industrial Park, Thuan An Town, Binh Duong Province, Vietnam<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第020914號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/10/02<br>｜<br>2024/10/02</td>
+<td>"新耳" 助聽器 (未滅菌)<br>"New Ear" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>精俐有限公司<br>地址：新北市五股區五權七路12號7樓</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021020號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2019/11/18<br>｜<br>2024/11/18</td>
+<td>“瑞愔”氣導式助聽器（未滅菌）<br>"Rionet" Air Conduction Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>寶聯光學股份有限公司<br>地址：新北市汐止區新台五路1段97號17樓之7</td>
+<td>RION COMPANY, LTD.<br>廠址：3-20-41 HIGASHIMOTOMACHI, KOKUBUNJI, TOKYO 185-8533, JAPAN<br><br>製造廠國別：JP</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021176號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/01/10<br>｜<br>2030/01/10</td>
+<td>"西萬拓" 奧德聲助聽器 (未滅菌)<br>“Sivantos” Audio Service hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>頌主恩實業有限公司<br>地址：南投縣草屯鎮上林里太平路一段191號1樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021410號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/03/30<br>｜<br>2025/03/30</td>
+<td>"瑞士雅歌" 氣導式助聽器 (未滅菌)<br>"Argosy" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器,以下空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova AG<br>廠址：LAUBISRUTISTRASSE 28 CH-8712 STAFA SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021411號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/03/30<br>｜<br>2025/03/30</td>
+<td>優利康助聽器 (未滅菌)<br>"Unitron" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器,以下空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova AG<br>廠址：LAUBISRUTISTRASSE 28 CH-8712 STAFA SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021412號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/03/30<br>｜<br>2025/03/30</td>
+<td>"瑞士雅歌" 助聽器 (未滅菌)<br>"Argosy" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器,以下空白</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operations Center Vietnam Co., Ltd.<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK, THUAN AN CITY, BINH DUONG PROVINCE, VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021441號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/04/10<br>｜<br>2025/04/10</td>
+<td>優利康助聽器(未滅菌)<br>“Unitron” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>Sonova Operations Center Vietnam Co., Ltd<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK, THUAN AN CITY, BINH DUONG PROVINCE, VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021455號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/04/15<br>｜<br>2025/04/15</td>
+<td>"享盈" 氣導式助聽器 (未滅菌)<br>"WIN" Air Conduction hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>享盈股份有限公司<br>地址：新北市中和區連城路473號（1樓）</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021456號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/04/15<br>｜<br>2025/04/15</td>
+<td>"西萬博" 氣導式助聽器 (未滅菌)<br>"Vibe" Air Conduction hearing aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>萊利股份有限公司<br>地址：新北市深坑區北深路3段246-10號2樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021602號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/06/01<br>｜<br>2025/06/01</td>
+<td>"索諾瓦" 氣導式助聽器 (未滅菌)<br>"Sonova" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>建聲實業有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之2</td>
+<td>Sonova AG<br>廠址：LAUBISRUTISTRASSE 28 CH-8712 STAFA SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021722號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/07/10<br>｜<br>2025/07/10</td>
+<td>侑聲助聽器 (未滅菌)<br>Yu sheng hearing aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>侑聲企業社<br>地址：南投縣竹山鎮集山路二段89號</td>
+<td>Sonova Operation Center Vietnam Co., Ltd<br>廠址：29A VSIP, STREET NO.8 VIETNAM SINGAPORE INDUSTRIAL PARK THUAN AN TOWN BINH DUONG PROVINCE VIETNAM<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021815號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/08/03<br>｜<br>2025/08/03</td>
+<td>"建聲" 氣導式助聽器 (未滅菌)<br>"JEN SOUND" Air conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>建聲實業有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之2</td>
+<td>Sonova Operations Center Vietnam Co., Ltd<br>廠址：29A VSIP Street 8, Vietnam-Singapore Industrial Park, Thuan Giao Ward, Thuan An Town Binh Duong Province, Vietnam<br><br>製造廠國別：VN</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021843號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/08/10<br>｜<br>2025/08/10</td>
+<td>康樂斯助聽器配件(未滅菌)<br>Connexx accessories (Non-sterile)</td>
+<td>1 級醫材<br>搭配瑞斯頓氣導式助聽器之串流器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>Sivantos GmbH<br>廠址：Henri-Dunant-Strasse 100, 91058 Erlangen, Germany<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第021843號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/08/10<br>｜<br>2025/08/10</td>
+<td>康樂斯助聽器配件(未滅菌)<br>Connexx accessories (Non-sterile)</td>
+<td>1 級醫材<br>搭配瑞斯頓氣導式助聽器之串流器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>DGS Pl. Sp. z o.o.<br>廠址：UI. Lubieszynka 42, Mierzyn, 72-006, Poland<br><br>製造廠國別：PL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022073號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/11/02<br>｜<br>2025/11/02</td>
+<td>"倍易耳" 氣導式助聽器 (未滅菌)<br>"Be Hear Now" Air conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>實密科技股份有限公司<br>地址：臺北市信義區忠孝東路5段1之3號10樓</td>
+<td>ALANGO TECHNOLOGIES LTD.<br>廠址：2 ETGAR STREET, TIRAT CARMEL, 3903213, ISRAEL<br><br>製造廠國別：IL</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022136號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/11/27<br>｜<br>2025/11/27</td>
+<td>“歐俄聲” 助聽器 (未滅菌)<br>“AURICA” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>有福電氣企業行<br>地址：臺北市大同區重慶北路二段一九六號四樓之五</td>
+<td>AURICA LTD.<br>廠址：RUSSIAN FEDERATION: 301138, TECHNOPARK INSHINSKY TERRITORY, BLD. 1, POSELOK INSHINSKY, TULA, RUSSIA<br><br>製造廠國別：RU</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022212號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/12/30<br>｜<br>2025/12/30</td>
+<td>聽貝爾奧迪聲助聽器 (未滅菌)<br>Bay Audiology Audio Service hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022213號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2020/12/30<br>｜<br>2025/12/30</td>
+<td>科林奧迪聲助聽器 (未滅菌)<br>Clinico Audio Service hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022374號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/03/09<br>｜<br>2026/03/09</td>
+<td>"瑞聲"助聽器(未滅菌)<br>"GN ReSound" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>佳音聽力有限公司<br>地址：臺北市中正區衡陽路20號3樓</td>
+<td>GN RESOUND A/S<br>廠址：LAUTRUPBJERG 7, 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022650號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2021/09/14<br>｜<br>2026/09/14</td>
+<td>“上韻”氣導式助聽器(未滅菌)<br>“Shangyun" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>上韻儀器有限公司<br>地址：雲林縣斗六市鎮西里雲林路二段465號1樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022775號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/04/01<br>｜<br>2027/04/01</td>
+<td>“叡聲達”氣導式助聽器(未滅菌)<br>“ReSound” Air Conduction Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022775號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/04/01<br>｜<br>2027/04/01</td>
+<td>“叡聲達”氣導式助聽器(未滅菌)<br>“ReSound” Air Conduction Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022808號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/05/23<br>｜<br>2027/05/23</td>
+<td>“奇恩” 氣導式助聽器(未滅菌)<br>“GN” Air Conduction Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022808號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/05/23<br>｜<br>2027/05/23</td>
+<td>“奇恩” 氣導式助聽器(未滅菌)<br>“GN” Air Conduction Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前鎮區中華五路６５６號</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第022950號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2022/11/09<br>｜<br>2027/11/09</td>
+<td>"萬得聲" 氣導式助聽器 (未滅菌)<br>"WSAUD A/S" Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>理工科技顧問股份有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>WSAUD A/S<br>廠址：Nymollevej 6 3540 Lynge Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023008號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/01/06<br>｜<br>2028/01/06</td>
+<td>"利凌" 丹納福 助聽器(未滅菌)<br>"GN" Danavox Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023008號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/01/06<br>｜<br>2028/01/06</td>
+<td>"利凌" 丹納福 助聽器(未滅菌)<br>"GN" Danavox Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023058號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/03/06<br>｜<br>2028/03/06</td>
+<td>龍樂助聽器 (未滅菌)<br>Hearwell Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>龍樂實業有限公司<br>地址：新北市板橋區館前東路96號9樓之5</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023073號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/03/15<br>｜<br>2028/03/15</td>
+<td>"頌主恩" 丹納福助聽器(未滅菌)<br>"GN" Danavox Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導式助聽器，以下空白。</td>
+<td>頌主恩實業有限公司<br>地址：南投縣草屯鎮上林里太平路一段191號1樓</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023073號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/03/15<br>｜<br>2028/03/15</td>
+<td>"頌主恩" 丹納福助聽器(未滅菌)<br>"GN" Danavox Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導式助聽器，以下空白。</td>
+<td>頌主恩實業有限公司<br>地址：南投縣草屯鎮上林里太平路一段191號1樓</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023081號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/03/27<br>｜<br>2028/03/27</td>
+<td>"元健" 助聽器(未滅菌)<br>"Digibionic" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元健大和直販事業股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>WSAUD A/S<br>廠址：Nymollevej 6 3540 Lynge Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023110號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/05/05<br>｜<br>2028/05/05</td>
+<td>“全國” 力斯頓助聽器(未滅菌)<br>“ALL DAY” REXTON Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>全國實業有限公司<br>地址：臺北市中正區館前路6號5樓之1</td>
+<td>Sivantos GmbH<br>廠址：Henri-Dunant-Strasse 100, 91058 Erlangen, Germany<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023110號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/05/05<br>｜<br>2028/05/05</td>
+<td>“全國” 力斯頓助聽器(未滅菌)<br>“ALL DAY” REXTON Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>全國實業有限公司<br>地址：臺北市中正區館前路6號5樓之1</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023193號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/08/01<br>｜<br>2028/08/01</td>
+<td>“靜好” 氣導式助聽器(未滅菌)<br>“Trustech” Air Conduction Hearing Aid(non-sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>靜好科技股份有限公司<br>地址：新北市新莊區中正路347巷8號(1樓)</td>
+<td>GN HEARING A/S<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023193號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/08/01<br>｜<br>2028/08/01</td>
+<td>“靜好” 氣導式助聽器(未滅菌)<br>“Trustech” Air Conduction Hearing Aid(non-sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>靜好科技股份有限公司<br>地址：新北市新莊區中正路347巷8號(1樓)</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023220號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/08/25<br>｜<br>2028/08/25</td>
+<td>"班堤" 助聽器 (未滅菌)<br>"BHM-Tech" Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路4段191號2樓之1</td>
+<td>BHM-TECH PRODUKTIONSGESELLSCHAFT MBH<br>廠址：GRAFENSCHACHEN 242, 7423 GRAFENSCHACHEN, AUSTRIA<br><br>製造廠國別：AT</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023267號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/10/04<br>｜<br>2028/10/04</td>
+<td>希萬博氣導式助聽器(未滅菌)<br>Sivantos Vibe Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>大樹醫藥股份有限公司<br>地址：桃園市桃園區復興路186號18樓</td>
+<td>SIVANTOS PTE LTD<br>廠址：18 TAI SENG STREET, #08-08, SINGAPORE 539775, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023274號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2023/10/16<br>｜<br>2028/10/16</td>
+<td>統一 助聽器(未滅菌)<br>"Tone-E" A&amp;M Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>統一助聽器行<br>地址：高雄市新興區中山一路200號3樓之2號</td>
+<td>SIVANTOS PTE. LTD<br>廠址：18 TAI SENG STREET, #08-08 SINGAPORE 539775, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023538號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2024/07/12<br>｜<br>2029/07/12</td>
+<td>"優聲"氣導式助聽器 (未滅菌)<br>"You-Sheng" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>優聲聽力有限公司<br>地址：嘉義市東區吳鳳北路285號1樓</td>
+<td>Sivantos Pte Ltd<br>廠址：18 Tai Seng Street, #08-08 Singapore 539775, Singapore<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023582號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2024/08/27<br>｜<br>2029/08/27</td>
+<td>永創國際助聽器(未滅菌)<br>M &amp; D International Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>永創國際企業股份有限公司<br>地址：臺北市大安區忠孝東路4段221號8樓(832室)</td>
+<td>WSAUD A/S<br>廠址：Nymøllevej 6 3540 Lynge Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛部醫器輸壹字第023583號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2024/08/28<br>｜<br>2029/08/28</td>
+<td>中央 貝爾通 氣導式助聽器(未滅菌)<br>Center Beltone Air Conduction Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>中央電氣企業有限公司<br>地址：臺北市中正區八德路1段94號2樓</td>
+<td>GN RESOUND (MALAYSIA) SDN BHD<br>廠址：NO.5 JALAN I-PARK 1/1 KAWASAN PERINDUSTRIAN I-PARK 81000 BANDAR INDAHPURA KULAI JOHOR MALAYSIA<br><br>製造廠國別：MY</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000020號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2005/10/27<br>｜<br>2025/10/27</td>
+<td>麗聲助聽器（未滅菌）<br>Lisound Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>未滅菌：BODY AID UT550BODY AID UT551BODY AID UP700規格變更：空白，氣導式助聽器（依本署95年4月14日衛署藥字第0950311929號公告辦理，第一等級醫療器材查驗登記審查，不登錄產品型號）。</td>
+<td>馨樺有限公司<br>地址：台中市沙鹿區中山路420號1樓</td>
+<td>LISOUND HEARING AID (FUZHOU) CO., LTD.<br>廠址：15 HONGSHAN HI-TECH-ZONE, FUZHOU, 350002 CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000136號</td>
+<td>2018/08/09<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2006/03/21<br>｜<br>2016/03/21</td>
+<td>"托恩康" 助聽器<br>"TONECON" Hearing aid</td>
+<td>1 級醫材<br>Tonecon hearing aids [Model: T691、T680、T690〕and "PANCAN" hearing aids 〔Model: T980 (includes A-T980、C-980、H-T980、HP-T980)T981(includes A-T981、AX-T981、C-T981、CX-T981、H-T981、HP-T981、GEX-T981、GE-T981、T981X)、T991(includes HT-T991、GE-T991、GEX-T991、991-PLUS、T991X、T991、king991、king991X)、T990(includes T990、HP-T990、990-PLUS、king990)〕。</td>
+<td>信安電氣企業行<br>地址：台南市北區成功路2號5樓之30</td>
+<td>NANJING TONECON HEARING EQUIPMENT CO., LTD<br>廠址：ROOM B1104, JINLUAN MANSION, NO.101, ZHONGSHAN SOUTH ROAD, NANJING JIANGSU, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000184號</td>
+<td>2018/06/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/12<br>｜<br>2016/04/12</td>
+<td>元勛助聽器(未滅菌)<br>DIGIMAX Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>UP-64XX，以下空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>FORTIFIER INTERNATIONAL CO., LTD.<br>廠址：XINGCHENG RD., CHEN WU VILLAGE, WUSHA DISTRICT, CHANGAN TOWN, DONGGUAN CITY, GUANGDONG, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000215號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2006/04/17<br>｜<br>2026/04/17</td>
+<td>"中山達溢"氣導性助聽器(未滅菌)<br>"Zhongshan Dayi" Air Condition Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>MT-168,MT-170,MT-172,DY-2000.DY-2000A,DY-775P.MT-70P,MT-75P,MT-88FM,DY-97,DY-97P,DY-97FM.</td>
+<td>加恩展業有限公司<br>地址：新北市板橋區長安街二十五巷一之三號四樓</td>
+<td>ZHONGSHAN DAYI ELECTRIC APPLIANCE FACTORY<br>廠址：NO. 70, MINAN MIDDLE RD. XIAOLAN TOWN. ZHONGSHAN CITY. GUANGDONG, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000255號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2006/05/30<br>｜<br>2026/05/30</td>
+<td>“寶利喜”霖聲氣導性助聽器(未滅菌)<br>“Poly Eastern”NEOSOUND Air Condition Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>井上醫療器材有限公司<br>地址：臺北市北投區知行路316巷20弄11號</td>
+<td>POLY EASTERN HEALTHCARE LTD.<br>廠址：NO. 80 SHANGYE ROAD HUADU GUANGZHOU CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000526號</td>
+<td>2015/04/24<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2008/07/02<br>｜<br>2013/07/02</td>
+<td>“新聲”氣導助聽器 (未滅菌)<br>“NewSound”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>升音實業有限公司<br>地址：台中市西區博館路240號1樓</td>
+<td>XIAMEN NEWSOUND TECHNOLOGY CO., LTD.<br>廠址：S302 WEIYE BUILDING, XIAMEN PIONEERING PARK FOR WVERSEA CHINESE SCHOLARS, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000651號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2009/04/01<br>｜<br>2024/04/01</td>
+<td>“比爾曼”助聽器（未滅菌）<br>“Bellman”Hearing Aids(Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>虹韻國際貿易股份有限公司<br>地址：臺北市中正區重慶南路1段99號2樓</td>
+<td>BELLMAN &amp; SYMFON ASIA LTD.<br>廠址：1105, MAIN TOWER, GD INTL HOTEL 339 HUANGSHI DONG RD, GUANGZHOU, CHINA, 510098<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000947號</td>
+<td>2018/06/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2010/06/01<br>｜<br>2015/06/01</td>
+<td>“元勛”太陽能充電式助聽器（未滅菌）<br>“Digimax” Solar Rechargeable Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>HUI ZHOU SAN HUA INDUSTRIAL CO., LTD<br>廠址：ZONE 14, ZHONGKAI HI-TECH DEVELOPMENT ZONE, HUIZHOU CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第000966號</td>
+<td>2018/06/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2010/07/05<br>｜<br>2015/07/05</td>
+<td>“元勛”耳掛式充電助聽器 (未滅菌)<br>“Digimax”Behind-The-Ear Rechargeable Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>HUI ZHOU SAN HUA INDUSTRIAL CO., LTD<br>廠址：ZONE 14, ZHONGKAI HI-TECH DEVELOPMENT ZONE, HUIZHOU CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001191號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2010/12/13<br>｜<br>2015/12/13</td>
+<td>“瑞聲達”助聽器 (未滅菌)　<br>“GN ReSound”Hearing Aid (Non-Sterile)　</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>巨泉實業有限公司<br>地址：台北市中正區重慶南路一段121號5樓之7</td>
+<td>GN RESOUND CHINA LTD.<br>廠址：15 CHUANG XIN ROAD CTP AREA XIAMEN 361006 PRC CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001322號</td>
+<td>2018/06/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/04/01<br>｜<br>2016/04/01</td>
+<td>"元勛"充電式耳掛助聽器(未滅菌)<br>"Digimax" Rechargeable BTE Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>HUI ZHOU SAN HUA INDUSTRIAL CO., LTD<br>廠址：ZONE 14, ZHONGKAI HI-TECH DEVELOPMENT ZONE, HUIZHOU CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001329號</td>
+<td>2023/06/15<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/04/12<br>｜<br>2021/04/12</td>
+<td>"元勛"助聽器(未滅菌)<br>"Digimax" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>HUI ZHOU SAN HUA INDUSTRIAL CO., LTD<br>廠址：ZONE 14, ZHONGKAI HI-TECH DEVELOPMENT ZONE, HUIZHOU CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001483號</td>
+<td>2023/06/15<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/10/04<br>｜<br>2021/09/15</td>
+<td>“希耳聆”李邁傑斯助聽器 (未滅菌)<br>“Hearing” Lee Majors Rechargeable Bionic Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>HEARING ASSIST, LLC<br>廠址：ZONE 14, ZHONGKAI HI-TECH DEVELOPMENT ZONE, HUIZHOU CITY, GUANGDONG PROVINCE, CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001526號</td>
+<td>2018/06/08<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/11/18<br>｜<br>2016/11/18</td>
+<td>"利賞" 氣導助聽器 (未滅菌)<br>"Lisound" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>歐德聽視力有限公司<br>地址：臺北市中正區中華路1段25之3號9樓之3</td>
+<td>LISOUND HEARING AID (FUZHOU) CO., LTD.<br>廠址：FUZHOU SOFTWARE PARK, 89 SOFTWARE AVE, FUZHOU, CHINA 350003<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001557號</td>
+<td>2023/08/15<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/12/28<br>｜<br>2021/12/28</td>
+<td>“龍音”氣導式助聽器（未滅菌）<br>“LONG TONE”Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>龍音實業有限公司<br>地址：苗栗縣頭份鎮東庄里自強路150巷2-5號3樓</td>
+<td>AUSTAR HEARING SCIENCE AND TECHNOLOGY CO,. LTD.<br>廠址：WASHINGTON ROAD, HULI DISTRICT, XIAMEN ORIENTAL TRADING BUILDING, SIX<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器陸輸壹字第001824號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/01/21<br>｜<br>2023/01/21</td>
+<td>"綠十字" 助聽器 (未滅菌)<br>"GREEN CROSS" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>綠十字醫療器材股份有限公司<br>地址：高雄市前鎮區和平二路192號2樓</td>
+<td>ZHONGSHAN WILTON ELECTRONICS TECHNOLOGY CO., LTD.<br>廠址：NO. 1, 1 ST., GUANGCHENG S. RD., XIAOLAN TOWNSHIP, ZHONGSHAN CITY, GUANGDONG PROV., CHINA<br><br>製造廠國別：CN</td>
+</tr>
+<tr>
+<td>衛署醫器製壹字第002136號</td>
+<td>2015/08/03<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2008/05/07<br>｜<br>2013/05/07</td>
+<td>“威聲”氣導助聽器 (未滅菌)<br>“Woey Shern”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>威聲實業有限公司<br>地址：彰化縣彰化市磚瑤路152號1樓</td>
+<td>威聲實業有限公司<br>廠址：彰化縣彰化市磚瑤路152號1樓<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛署醫器製壹字第002541號</td>
+<td>2018/06/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2009/07/22<br>｜<br>2014/07/22</td>
+<td>“明展”助聽器 (未滅菌)<br>“Aescu” Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>明展生醫科技股份有限公司<br>地址：台北市北投區義理街17號1樓</td>
+<td>明泰科技股份有限公司<br>廠址：新竹科學工業園區新竹市東區力行七路8號<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛署醫器製壹字第004687號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/06/26<br>｜<br>2028/06/26</td>
+<td>"元健大和"助聽器(未滅菌)<br>"Digibionic" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>元健大和直販事業股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>元皓能源股份有限公司臨廣加工區廠<br>廠址：高雄市前鎮區新生路248-26號4樓(臨廣園區B2棟4樓402廠房)<br><br>製造廠國別：TW</td>
+</tr>
+<tr>
+<td>衛署醫器輸字第018132號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/06/22<br>｜<br>2022/06/22</td>
+<td>“可立耳”巴哈系統<br>“Cochlear”BAHA Systems</td>
+<td>2 級醫材<br>BAHA Divino, BAHA Compact, BAHA Cordelle II，以下空白。增加規格：Baha Intenso black (產品碼：90731),Baha Intenso blonde (產品碼：90730),Baha Intenso silvergrey (產品碼：90732),Baha Intenso brown (產品碼：90733)。註銷規格：90140、90141、90142，以下空白。</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路三六六號12樓之3</td>
+<td>COCHLEAR BONE ANCHORED SOLUTIONS AB<br>廠址：KONSTRUKTIONSVAGEN 14, SE-435 33 MOLNLYCKE, SWEDEN<br><br>製造廠國別：SE</td>
+</tr>
+<tr>
+<td>衛署醫器輸字第020541號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/01/20<br>｜<br>2025/01/20</td>
+<td>“可立耳”聲音處理器<br>“Cochlear” Sound Processor</td>
+<td>2 級醫材<br>BP100以下空白。增加規格：BP110 Power，以下空白。註銷規格：BP100 (原99.2.11核准之仿單、標籤核定本正本予以回收作廢)，以下空白。</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>COCHLEAR BONE ANCHORED SOLUTIONS AB<br>廠址：KONSTRUKTIONSVAGEN 14, SE-435 33 MOLNLYCKE, SWEDEN<br><br>製造廠國別：SE</td>
+</tr>
+<tr>
+<td>衛署醫器輸字第023130號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2011/12/19<br>｜<br>2026/12/19</td>
+<td>“可立耳”巴哈聽力植入體系統<br>“Cochlear” Baha Implant System 300 Series</td>
+<td>3 級醫材<br>詳如中文仿單核定本</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>COCHLEAR BONE ANCHORED SOLUTIONS AB<br>廠址：KONSTRUKTIONSVAGEN 14, SE-435 33 MOLNLYCKE, SWEDEN<br><br>製造廠國別：SE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第000712號</td>
+<td>2022/08/05<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2005/10/03<br>｜<br>2020/10/03</td>
+<td>"久瑜" 助聽器 (未滅菌)<br>"JEOU YU" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>詳如附冊共一頁。</td>
+<td>久瑜企業有限公司<br>地址：新竹市北區中正路107號8樓之11室</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第000775號</td>
+<td>2022/06/07<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/10/04<br>｜<br>2020/10/04</td>
+<td>“理聲”貝爾通助聽器 (未滅菌)<br>“Resound” Beltone Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>Beltone Analogue BTE Series M41 P77-I S41 S80 S90 S71-O。Beltone B/W Concerto II Concerto III。Beltone Digital Series Edge E65。Corus Series C75D C45 C35 C15。Oria Series O75D O45/45D O35/35D O15。Mira Series M75 M45/M45D M35/M35D M15。Arca Series A84 A74 A44 A34 A14。</td>
+<td>有福電氣企業行<br>地址：台北市大同區重慶北路2段196號4樓之5</td>
+<td>GN RESOUND A/S<br>廠址：MARKAERVEJ 2A, DK-2630 TAASTRUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第000974號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2005/10/17<br>｜<br>2025/10/17</td>
+<td>“理音”助聽器及其附屬零、配件（未滅菌）<br>"Rionet" Hearing Aid with Parts and Accessories(Non-Sterile)</td>
+<td>1 級醫材<br>HA-70, HA-71, HA-73, HB-37S, HB-37T, HB-M1, HB-M2, HB-41, HB-41P, HB-54, HB-54AS, HB-56P, HB-56CD, HB-D2NR, HB-D4PV, HC-D1E, HB-D5E, HB-G1E, HB-G1S, HB-82MC, HI-D5V, HI-D6V, HI-D7PV, HI-70/R, HI-70/L, HM-04。規格變更：空白。</td>
+<td>利音貿易開發股份有限公司<br>地址：臺北市中正區博愛路9號7樓之2</td>
+<td>RION COMPANY, LTD.<br>廠址：3-20-41 HIGASHIMOTOMACHICHO, KOKUBUNJISHI, TOKYO, 185 JAPAN<br><br>製造廠國別：JP</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第000985號</td>
+<td>2022/06/16<br>已註銷<br>自行鍵入</td>
+<td class="center">2005/10/18<br>｜<br>2020/10/18</td>
+<td>斯達克氣導式助聽器(未滅菌)<br>STARKEY AIR CONDUCTION HEARING AIDS (Non-Sterile)</td>
+<td>1 級醫材<br>詳如附冊共1頁</td>
+<td>佳聲企業有限公司<br>地址：台北市大安區羅斯福路三段293號4樓之3</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：6700 WASHINGTON AVENUE SOUTH EDEN PRAIRIE, MINNESOTA 55344 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001209號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2005/10/26<br>｜<br>2025/10/26</td>
+<td>峰力助聽器(未滅菌)<br>Phonak Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>未滅菌：（1）SOLO （2）MAXX 11/MAXX 22/MAXX211/MAXX311 Forte/POWERMAXX 411 （3）SUPERO 411/SUPER 412 （4）VALEO 11/VALEO 22/VALEO 33 Forte/VALEO 211/VALEO 311 Forte （5）PERSEO 11/PERSEO 22/PERSEO 23 dAZ/PERSEO 111 Daz/PERSEO 211 dAZ/PERSEO 311 dAZ Forte（6）CLASSICA PP-C-L-P/CLASSICA PP-C-P（7）PICOFORTE3 PP-C-L-P/PICOFORTE3 PP-C-P（8）SUPER-FRONT PP-C-L-4/SUPER-FRONT PP-C-L-4+。詳如附冊共1頁。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001212號</td>
+<td>2012/12/03<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/10/26<br>｜<br>2010/10/26</td>
+<td>助聽器及其附件<br>HEARING AID &amp; PARTS</td>
+<td>1 級醫材<br>詳如附冊，共一頁。</td>
+<td>全國實業有限公司<br>地址：臺北市中正區前路6號5樓7室</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001261號</td>
+<td>2018/06/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/10/26<br>｜<br>2015/10/26</td>
+<td>"僑聲" 助聽器 (未滅菌)<br>"Chiaoson" A&amp;M Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>AM DIGITRIM 11 ITE/ITC/CIC、AM DIGITRIM 22、DIFITRIM 22 XP,以下空白。</td>
+<td>僑聲實業有限公司<br>地址：台中市中區雙十路一段1號8樓之1</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001287號</td>
+<td>2022/07/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2005/10/27<br>｜<br>2020/10/27</td>
+<td>斯達克助聽器 (未滅菌)<br>STARKEY HEARING AID (Non-Sterile)</td>
+<td>1 級醫材<br>空白（依本署95年4月14日衛署藥字第0950311929號公告辦理，第一等級醫療器材查驗登記審查，不登錄產品型號</td>
+<td>僑聲實業有限公司<br>地址：台中市中區雙十路一段1號8樓之1</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：6700 WASHINGTON AVENUE SOUTH EDEN PRAIRIE, MINNESOTA 55344 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001289號</td>
+<td>2018/06/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/10/27<br>｜<br>2015/10/27</td>
+<td>愛音助聽器(未滅菌)<br>AM Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>詳如附冊共一頁。</td>
+<td>權威實業有限公司<br>地址：臺北市中正區漢口街一段１１０號５樓之１１</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001527號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/10/30<br>｜<br>2020/10/30</td>
+<td>"亞洲" 助聽器 (未滅菌)<br>"ASIA" Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>Pocket Aid: 48W, 60JW, 60PP;Behind The Ear Aid: F80HT+, spectra-ET+, Spectra-S+, Spectra-PP+, Energy-P, Mini 29PP-O/PC</td>
+<td>亞洲電氣企業行<br>地址：高雄市三民區建國三路157號4樓之1</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001643號</td>
+<td>2013/01/17<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/11/01<br>｜<br>2010/11/01</td>
+<td>〝聰得〞助聽器 (未滅菌)<br>"Sountex" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>Triano 3, Triano 3 P, Triano SP, Prisma 2, Prisma 2P, Prisma 2 D SP, Music Pro, Music Pro Directional, Music Pro SP, Infiniti Pro, Infiniti Pro SP, Acuris P, Acuris S, Triano ITE, Triano ITC, Triano CIC, Triano ITE Directional, Triano ITC Directional, Prisma 2 ITE, Prisma 2 ITC, Prisma 2 CIC, Prisma 2 ITE Directional, Prisma 2 ITC Directional, Music Pro ITE, Music Pro ITC, Music Pro CIC,Music Pro ITE Directional, Music Pro ITC Directional, Infiniti Pro ITE, Infiniti Pro ITC, Infiniti Pro CIC, Infiniti Pro ITE Directional, Infiniti Pro ITC Directional, Acuris ITE, Acuris ITC, Acuris CIC, Acuris ITE Directional, Acuris ITC Directional。S520 Life, S520 S, S520 Directional, S520 ITE Directional, S520 ITE, S520 ITC Directional, S520 ITC, S520 CIC, S600 Life, S600 S, S600 ITE Directional, S600 ITE, S600 ITC Directional, S600 ITC, S600 CIC, S600 S e2e, S600 e2e ITE Directional, S600 e2e ITE, S600 e2e ITC Directional, S600 e2e ITC, S600 e2e CIC。S900 Life BTE, S900 S Push Button BTE, S900 S VC BTE, S900 P BTE, S900 HP BTE, S900 SP BTE, S900 ITE, S900 ITE Directional, S900 ITC, S900 ITC Directional, S900 CIC, S520 P BTE, S520 SP BTE, S600 P BTE, S600 SP BTE。</td>
+<td>友信行股份有限公司<br>地址：台北市敦化南路二段９７號１４樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001678號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2005/11/02<br>｜<br>2025/11/02</td>
+<td>悅安助聽器(未滅菌)<br>AM Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>空白。（依95年4月14日衛署藥字第0950311929號公告辦理）</td>
+<td>台灣達孚股份有限公司<br>地址：臺北市松山區民權東路3段142號13樓之3（1503室）</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001735號</td>
+<td>2022/08/05<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2005/11/04<br>｜<br>2020/11/04</td>
+<td>“西門紫”瑞客思登助聽器 (未滅菌)<br>“Siemens”Rexton Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>BTE：Spectra S Plus,PP Plus;Targa 1P,2P,3P;Regatta 1P;Energy P-L;Arena2HP。ITE：Targa 1,2,3 ITE;Linear Arena ITE;Regatta 1ITE。Pocket：Fusion,Fusion+,Fusion pp+,以下空白。</td>
+<td>龍友實業有限公司<br>地址：台中市西屯區工業區一路2巷3號6樓之8</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001782號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/11/09<br>｜<br>2020/11/09</td>
+<td>"大詠韻" 助聽器 (未滅菌)<br>“Sound Shine”A &amp; M Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>AM60JW Pocket aid, AM60PP Pocket aid, AM18BTE, AM34BTE, AN150PP BTE, AM152 AGC BTE, AM530BTE, AM550BTE, AM260PP BTE, AM440PP BTE, AM Aurora, AM AuroraITE/ITC/CIC, AM Aurorall, AM Aurorall ITE/ITC/CIC, AM Aurora Plus, AM Aurora Plus ITE/ITC/CIC, AM Digitrim 11, AM Digitrim 11 ITE/ITC/CIC, AM Digitrim22, AM Digitrim 22XP, 以下空白。</td>
+<td>大詠韻企業社<br>地址：台南市東區崇善十一街12巷24號</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001819號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2005/11/09<br>｜<br>2025/11/09</td>
+<td>聲得助聽器 (未滅菌)<br>Prosonichos Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>詳如附冊共2頁。</td>
+<td>聲得有限公司<br>地址：臺北市中正區襄陽路6號10樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001858號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2005/11/10<br>｜<br>2025/11/10</td>
+<td>中央貝爾通助聽器 (未滅菌)<br>Center Beltone Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器, 以下空白。</td>
+<td>中央電氣企業有限公司<br>地址：臺北市中正區八德路1段94號2樓</td>
+<td>GN RESOUND A/S<br>廠址：MARKAERVEJ 2A, DK-2630 TAASTRUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第001859號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/11/10<br>｜<br>2015/11/10</td>
+<td>“中央”助聽器 (未滅菌)<br>“Center”AM Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>AM18 BTE, AM60JW PockerAid, AM60PP PocketAid, AM34 BTE, AM150PP BTE, AM152 AGC BTE, AM530 BTE, AM550 BTE, AM260PP BTE, AM440PP BTE, AM Aurora ITE/ITC/CIC, AM AURORA 11 ITE/ITC/CIC, AM AURORA Plus ITE/ITC/CIC, AM DIGITRIM 11 ITE/ITC/CIC, AM DIGiTRIM 22 XP, 以下空白。</td>
+<td>中央電氣企業有限公司<br>地址：台北市中正區八德路一段94號2樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第002247號</td>
+<td>2012/11/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/12/12<br>｜<br>2010/12/12</td>
+<td>氣導性助聽器 (未滅菌)<br>Air Condition Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>BTE: 1. LEONARDO VC 2. Ear.sy PREMIO 3. PREMIO 4. PREMIO VC 5.Ear.sy VITAL 6. VITAL/49 4C MM II 7. Ear.sy ACTIVO 8. ACTIVO MM 9. ACTIVO II 10. ACTIVO VC 11. ACTIVO Soft 12. DYNAMIC VC 13. DYNAMIC-HP VC 14. LITE3-VC 15. LITE3-HP VCITE: 1. Ear.sy LEONARDO Concha 2. LEONARDO Concha 3. LEONARDO Canal 4. LEONARDO CIC 5. Ear.sy PREMIO Concha 6. PREMIO Concha 7. PREMIO Canal 8. PREMIO CIC 9. Ear.sy VITAL Concha 10. VITAL Concha 11. VITAL Canal 12. VITAL CIC 13. Ear.sy ACTIVO Concha 14. ACTIVO Concha 15. ACTIVO Canal 16. ACTIVO CIC 17. DANAMIC Concha 18. DANAMIC Canal 19. DANAMIC CIC</td>
+<td>頌聆興業有限公司<br>地址：台中市北區博館路８８號７樓之１</td>
+<td>HANSATON AKUSTIK GMBH<br>廠址：STUCKENSTRASSE 48 22081 HAMBURG GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第002261號</td>
+<td>2013/01/17<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/12/14<br>｜<br>2010/12/14</td>
+<td>"西門子"助聽器 (未滅菌)<br>"SIEMENS" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>Acuris P BTE, Acuris S BTE, Acuris ITE, Acuris ITE Directional, Acuris ITC, Acuris ITC Directional, Acuris CIC, Triano 3 BTE, Triano 3P BTE, Triano SP BTE, Triano ITE, Triano ITE Directional, Triano ITC, Triano ITC Directional, Triano CIC, Prisma 2 BTE, Prisma 2P BTE, Prisma 2 D SP BTE, Infiniti Pro ITC Directional, Infiniti Pro CIC, Infiniti Pro BTE, Infiniti Pro SP BTE, Infiniti Pro ITE, Infiniti Pro ITE Directional, Infiniti Pro ITC, Cielo Life, Cielo Directional BTE, Cielo S BTE, Cielo ITE Directional, Cielo ITE, Cielo ITC Directional, Cielo ITC, Cielo CIC, Prisma 2 ITE, Prisma 2 ITE Directional, Prisma 2 ITC, Prisma 2 ITC Directional, Prisma 2 CIC, Music Pro BTE, Music Pro Directional BTE, Music Pro SP BTE, Music Pro ITE, Music Pro ITE Directional, Music Pro ITC, Music Pro ITC Directional, Music Pro CIC, Phoenix 313, Phoenix One ITE, Phoenix One ITC, Phoenix One MC, Phoenix One CIC, Phoenix 213, Amiga 172N, Amiga 176 AO, Amiga 178 PP-AO, Artis S BTE, Artis S e2e BTE, Artis ITE Di</td>
+<td>上好醫療器材股份有限公司<br>地址：台北市中正區衡陽路20號4樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第002299號</td>
+<td>2022/06/07<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2005/12/21<br>｜<br>2020/12/21</td>
+<td>西門子(A&amp;M)助聽器（未滅菌）<br>SIEMENS (A&amp;M) Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>AM 18 BTE, AM AURORA 11, AM 60 PP POCKET AID, AM 550 BTE, AM 260 PP BTE, AM AURORA ITE/ITC/CIC, AM 34 BTE, AM 440 PP BTE, AM AURORA PLUS ITE/ITC/CIC, AM 150 PP BTE, AM AURORA, AM DIGITRIM 11 ITE/ITC/CIC, AM 152 AGC BTE, AM AURORA PLUS, AM 530 BTE, AM DIGITRIM 22, AM DIGITRIM 11, AM DIGITRIM 22 XP, 以下空白。 規格變更：空白，氣導式助聽器（依本署95年4月14日衛署藥字第0950311929號公告辦理，第一等級醫療器材查驗登記審查，不登錄產品型號）。</td>
+<td>馨樺有限公司<br>地址：台中市沙鹿區中山路420號1樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第002353號</td>
+<td>2022/06/17<br>已註銷<br>自行鍵入;;許可證已逾有效期</td>
+<td class="center">2005/12/26<br>｜<br>2020/12/26</td>
+<td>"頌聆" 氣導性助聽器 (未滅菌)<br>"Song Ring" Air Condition Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>規格變更為：空白（依本署95年4月14日衛署藥字第0950311929號公告辦理第一等級醫療器材查驗登記審查不登錄產品型號）。</td>
+<td>頌聆興業有限公司<br>地址：台中市北區博館路８８號７樓之１</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第002472號</td>
+<td>2012/11/30<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/01/06<br>｜<br>2011/01/06</td>
+<td>"德音" 助聽器 (未滅菌)<br>"INTERTON" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>BIONIC-Nanotwin、BIONIC-BigNanotwin、BIONIC-CM、IQ-Nano、IQ-CM、IQ-Quantum Multicros、IQ-CM WLX、IQ-CM WLXX、EVO-Quantum、EVO-Mega-power、EVO-CM、EVO-SsMo、EVO-SMC、STARIS-Supra、STARIS-Mega-Power、STARIS-CM、FINESSE-Supra、FINESSE-Mega-power、FINESSE-CM、D-Integra、D-CM、D-SMC、D-MINIMA 25 VC，以下空白。</td>
+<td>佳音聽力有限公司<br>地址：台北市中山區民權西路27號10樓之1</td>
+<td>INTERTON HORGERATE GMBH<br>廠址：AM DANNEKAMP 15 D-51469 BERGISCH GLADBACH, GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第002572號</td>
+<td>2016/04/14<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2006/01/27<br>｜<br>2016/01/27</td>
+<td>"比優通" 助聽器<br>"Puretone" Hearing Aid.</td>
+<td>1 級醫材<br>1. B.O.D.Y. BA3000PP, BA3000S2. B.T.E. PT-1PPS, PT-3P, PT-5P, PT-33. I.T.E. Kit E-312 with Feedback control, Kit AN-312 High Gain/Output, Kit D-13 feedback control4. I.T.C. Kit C-10 CLASD5. CIC Kit CIC-D CLASD, 以下空白。</td>
+<td>淳新企業有限公司<br>地址：高雄市前金區中山二路577號6樓之1</td>
+<td>PURETONE PLC<br>廠址：9-10 HENLEY BUSINESS PARK, TRIDENT CLOSE, MEDWAY CITY ESTATE, ROCHESTER, KENT. ME2 4FR ENGLAND<br><br>製造廠國別：GB</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003006號</td>
+<td>2013/01/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/03/17<br>｜<br>2011/03/17</td>
+<td>"西門子" 氣導助聽器<br>"SIEMES" AC HEARING AIDS</td>
+<td>1 級醫材<br>詳如附冊共1頁</td>
+<td>台灣維膜股份有限公司<br>地址：台北市大同區南京西路22號4樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003010號</td>
+<td>2012/11/01<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/03/17<br>｜<br>2011/03/17</td>
+<td>優而康助聽器<br>Unitron Hearing Aid</td>
+<td>1 級醫材<br>詳如附冊共1頁</td>
+<td>富聆股份有限公司<br>地址：臺北市大安區忠孝東路４段１６６號１２樓之２</td>
+<td>UNITRON HEARING LTD.<br>廠址：20 BEASLEY DRIVE, KITCHENER, ONTARIO, CANADA N2G 4X1<br><br>製造廠國別：CA</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003126號</td>
+<td>2018/04/25<br>已註銷<br>自行鍵入</td>
+<td class="center">2006/03/23<br>｜<br>2016/03/23</td>
+<td>"瑞而聰"助聽器(未滅菌)<br>"Rexton"Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>空白（依本署95年4月14日衛署藥字第0950311929號公告辦理第一等級醫療器材查驗登記審查不登錄產品型號）。</td>
+<td>富聆股份有限公司<br>地址：臺北市大安區忠孝東路４段１６６號１２樓之２</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003132號</td>
+<td>2019/01/18<br>已註銷<br>公司歇業</td>
+<td class="center">2006/03/23<br>｜<br>2021/03/23</td>
+<td>"虹韻西門子" 助聽器 (未滅菌)<br>"New Best Siemens" Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>Acuris P BTE, Acuris S BTE, Acuris ITE, Acuris ITE Directional, Acuris ITC,Acuris ITC Directional, Acuris CIC, Triano 3 BTE, Triano 3P BTE, Triano SP BTE,Triano ITE, Triano ITE Directional, Triano ITC, Triano ITC Directional, Triano CIC,Prisma 2 BTE, Prisma 2P BTE, Prisma 2 D SP BTE, Infiniti Pro ITC Directional,Infiniti Pro CIC, Infiniti Pro BTE, Infiniti Pro BTE, Infiniti Pro ITE,Infiniti Pro ITE Directional, Infiniti Pro ITC, Cielo Life, Cielo Directional BTE, Cielo S BTE, Cielo ITE Directional, Cielo ITE, Cielo ITC Directional, Cielo ITC,Cielo CIC, Prisma 2 ITE, Prisma 2 Ite, Directional, Prisma 2 ITC,Prisma 2 ITC Directional, Prisma 2 CIC, Music Pro BTE, Music Pro Directional BTE,Music Pro SP BTE, Music Pro ITE, Music Pro ITE Directional, Music Pro ITC,Music Pro ITC Directional, Music Pro CIC, Phoenix 313, Phoenix One ITE,Phoenix One ITC, Phoenix One MC, Phoenix One CIC, Phoenix 213,Amiga 172N, Amiga 176 AO, Amiga 178 PP-AO, Artis S BTE, Artis S e2e BTE,</td>
+<td>虹韻醫療器材股份有限公司<br>地址：台北市中正區衡陽路２０號４樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003416號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2006/04/03<br>｜<br>2026/04/03</td>
+<td>雅笛助聽器(未滅菌)<br>Audina Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器</td>
+<td>向音科技有限公司<br>地址：臺中市西區中美街123號1樓</td>
+<td>AUDINA HEARING INSTRUMENTS INC.<br>廠址：165 E. WILDMERE AVE., LONGWOOD, FL 32750 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003603號</td>
+<td>2023/09/19<br>已註銷<br>自行鍵入</td>
+<td class="center">2006/04/12<br>｜<br>2021/04/12</td>
+<td>"瑞聲達"助聽器 (未滅菌)<br>"GN"RESOUND Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>井上醫療器材有限公司<br>地址：臺北市北投區知行路316巷20弄11號</td>
+<td>GN RESOUND A/S<br>廠址：MARKAERVEJ 2A, DK-2630 TAASTRUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003725號</td>
+<td>2012/11/09<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/13<br>｜<br>2011/04/13</td>
+<td>依雷克通助聽器<br>Electone Hearing Aid</td>
+<td>1 級醫材<br>BTE：Rio Sierra,SP; Terra; Eclipse 2, 2sp; Eclipse 4 ITE：Rio Sierra ITE, ITC,CIC.Terra ITE, ITC,CIC.;Eclipse 2 ITE Directional, ITC Directional; Eclipse 4 ITC Directional, Eclipse 2CIC, Eclipse 4 CIC.</td>
+<td>龍友實業有限公司<br>地址：台中市西屯區工業區一路2巷3號6樓之8</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003772號</td>
+<td>2012/11/09<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/13<br>｜<br>2011/04/13</td>
+<td>依安眠助聽器<br>A&amp;M Hearing Aid</td>
+<td>1 級醫材<br>空白。</td>
+<td>龍友實業有限公司<br>地址：台中市西屯區工業區一路2巷3號6樓之8</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003918號</td>
+<td>2012/11/23<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/14<br>｜<br>2011/04/14</td>
+<td>"益耳" 助聽器<br>Puretone Hearing Aid</td>
+<td>1 級醫材<br>
+</td>
+<td>朋笛國際有限公司<br>地址：台北市中山區龍江路45巷2之4號</td>
+<td>PURETONE PLC<br>廠址：9-10 HENLEY BUSINESS PARK, TRIDENT CLOSE, MEDWAY CITY ESTATE, ROCHESTER, KENT. ME2 4FR ENGLAND<br><br>製造廠國別：GB</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第003992號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/17<br>｜<br>2016/04/17</td>
+<td>巨泉助聽器<br>Coselgi Hearing Aid</td>
+<td>1 級醫材<br>PRINCE D-MPO, JOLLY PP, B112 SMT STD, B16 SMT STD</td>
+<td>巨泉實業有限公司<br>地址：台北市中正區重慶南路一段121號5樓之7</td>
+<td>COSELGI S.P.A.<br>廠址：VIA LAURENTINA KM. 24, 700, 00040 POMEZIA (ROMA) ITALY<br><br>製造廠國別：IT</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004078號</td>
+<td>2018/04/25<br>已註銷<br>自行鍵入</td>
+<td class="center">2006/04/19<br>｜<br>2016/04/19</td>
+<td>"牛頓" 助聽器<br>"NEWTON" HEARING AID</td>
+<td>1 級醫材<br>1. RAMI-SERIES2. TA-SERIES3. TI-704. TCM5. SSM, 以下空白。</td>
+<td>益江企業股份有限公司<br>地址：高雄市前鎮區和平二路192號</td>
+<td>DAE HAN HEARING AID CO., LTD.<br>廠址：6F, YANG JI BLDG., 464-3 JANGAN3DONG, DONGDAEMUN-KU, SEOUL, KOREA<br><br>製造廠國別：KR</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004211號</td>
+<td>2012/10/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/25<br>｜<br>2011/04/25</td>
+<td>瑞聲 助聽器<br>GN ReSound Hearing Aid</td>
+<td>1 級醫材<br>空白</td>
+<td>開綸生物科技股份有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之1</td>
+<td>GN RESOUND A/S<br>廠址：MARKAERVEJ 2A, DK-2630 TAASTRUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004232號</td>
+<td>2017/09/21<br>已註銷<br>自請註銷</td>
+<td class="center">2006/04/26<br>｜<br>2021/04/26</td>
+<td>"西門子"氣導助聽器 (未滅菌)<br>"SIEMENS" AC HEARING AIDS (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>台灣維膜股份有限公司<br>地址：台北市大同區南京西路22號4樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004236號</td>
+<td>2013/01/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/26<br>｜<br>2011/04/26</td>
+<td>"奧迪" 氣導助聽器<br>AUDIFON AC HEARING AIDS</td>
+<td>1 級醫材<br>
+</td>
+<td>台灣維膜股份有限公司<br>地址：台北市大同區南京西路22號4樓</td>
+<td>AUDIFON GMBH<br>廠址：WERNER-VON-SIEMENS-STRABE 2, 99625 KOLLEDA, GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004257號</td>
+<td>2010/12/16<br>已註銷<br>自請註銷</td>
+<td class="center">2006/04/27<br>｜<br>2011/04/27</td>
+<td>“ 惠耳通 ”氣導助聽器 (未滅菌)<br>“ Vivatone ”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽寶股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>VIVATONE HEARING SYSTEMS, LLC<br>廠址：6 ARMSTRONG ROAD, SHELTON, CT 06484, U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004263號</td>
+<td>2012/11/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/04/27<br>｜<br>2011/04/27</td>
+<td>“ 益耳 ”氣導助聽器 (未滅菌)<br>“ Clear Tone Newton ”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>益耳有限公司<br>地址：臺北市中正區中華路一段２５號１０樓之７</td>
+<td>DAE HAN HEARING AID CO., LTD.<br>廠址：6F, YANG JI BLDG., 464-3 JANGAN3DONG, DONGDAEMUN-KU, SEOUL, KOREA<br><br>製造廠國別：KR</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004467號</td>
+<td>2011/01/12<br>已註銷<br>自請註銷</td>
+<td class="center">2006/05/12<br>｜<br>2011/05/12</td>
+<td>“美納通”氣導助聽器(未滅菌)<br>“Magnatone”Air Conduction Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽寶股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>MAGNATONE HEARING AID CORPORATION<br>廠址：170 NORTH CYPRESS WAY P.O. BOX 180964 CASSELBERRY, FL 32718-0964 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004622號</td>
+<td>2010/12/09<br>已註銷<br>自請註銷</td>
+<td class="center">2006/05/30<br>｜<br>2011/05/30</td>
+<td>“好適聽”氣導助聽器(未滅菌)<br>“Hansaton”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽寶股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>HANSATON AKUSTIK GMBH<br>廠址：STUCKEN STRASSE 48 D-22081 HAMBURG GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004757號</td>
+<td>2018/04/25<br>已註銷<br>自行鍵入</td>
+<td class="center">2006/06/20<br>｜<br>2016/06/20</td>
+<td>“優而康”氣導式助聽器 （未滅菌）<br>“Unitron”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>富聆股份有限公司<br>地址：臺北市大安區忠孝東路４段１６６號１２樓之２</td>
+<td>UNITRON HEARING LTD.<br>廠址：20 BEASLEY DRIVE, KITCHENER, ONTARIO, CANADA N2G 4X1<br><br>製造廠國別：CA</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004758號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/06/21<br>｜<br>2021/06/21</td>
+<td>“聲得”氣導助聽器 (未滅菌)<br>“Prosonic” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聲得有限公司<br>地址：台北市中正區襄陽路6號10樓</td>
+<td>HANSATON AKUSTIK GMBH<br>廠址：STUCKENSTRASSE 48 22081 HAMBURG GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004949號</td>
+<td>2018/05/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2006/07/21<br>｜<br>2016/07/21</td>
+<td>“唯聽”氣導助聽器 （未滅菌）<br>“WIDEX”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路四段191號2樓之1</td>
+<td>WIDEX A/S<br>廠址：NY VESTERGAARDSVEJ 25 3500 VAERLOESE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第004961號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2006/07/24<br>｜<br>2026/07/24</td>
+<td>“瑞聲達”氣導式助聽器 (未滅菌)<br>“GN ReSound” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>巨泉實業有限公司<br>地址：臺北市中正區重慶南路1段121號5樓之7</td>
+<td>GN RESOUND A/S<br>廠址：LAUTRUPBJERG 7, 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第005167號</td>
+<td>2010/12/09<br>已註銷<br>自請註銷</td>
+<td class="center">2006/09/19<br>｜<br>2011/09/19</td>
+<td>“貝爾通”氣導助聽器 (未滅菌)<br>“Beltone” Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽寶股份有限公司<br>地址：台北市大安區信義路四段380號7樓</td>
+<td>BELTONE A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第005519號</td>
+<td>2014/05/05<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/01/11<br>｜<br>2012/01/11</td>
+<td>“峰力克”助聽器(未滅菌)<br>“Phonak”Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>開綸生物科技股份有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之1</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第005769號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/04/17<br>｜<br>2022/04/17</td>
+<td>“西門子”空氣傳導性助聽器（未滅菌）<br>“Siemens”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>
+</td>
+<td>井上醫療器材有限公司<br>地址：臺北市北投區知行路316巷20弄11號</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第005827號</td>
+<td>2014/05/05<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/05/07<br>｜<br>2012/05/07</td>
+<td>“西門子”瑞而聰氣導式助聽器 （未滅菌）<br>“Siemens”Rexton Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>富聆股份有限公司<br>地址：臺北市大安區忠孝東路４段１６６號１２樓之２</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第005935號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/06/07<br>｜<br>2022/06/07</td>
+<td>“柏峰”氣導助聽器 (未滅菌)<br>“Bernafon”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>BERNAFON AUSTRALIA PTY LTD.<br>廠址：512 WICKHAM STREET, FORTITUDE VALLEY, BRISBANE QLD 4006, AUSTRALIA<br><br>製造廠國別：AU</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第005962號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/04/09<br>｜<br>2022/06/25</td>
+<td>“銳聲”氣導助聽器(未滅菌)<br>“GN Resound”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>誠惠科技股份有限公司<br>地址：新北市新莊區中正路347巷8號1樓</td>
+<td>GN RESOUND A/S<br>廠址：LAUTRUPBJERG 9 POSTBOX 99, 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第006091號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/08/16<br>｜<br>2022/08/16</td>
+<td>“補耳通”氣導助聽器 (未滅菌)<br>“Puretone”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>益耳有限公司<br>地址：臺北市中正區中華路一段25之3號9樓之4</td>
+<td>PURETONE PLC<br>廠址：9-10 HENLEY BUSINESS PARK, TRIDENT CLOSE, MEDWAY CITY ESTATE, ROCHESTER, KENT. ME2 4FR ENGLAND<br><br>製造廠國別：GB</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第006251號</td>
+<td>2014/03/27<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2007/10/26<br>｜<br>2012/10/26</td>
+<td>“西門子”氣導式助聽器 (未滅菌)<br>“SIEMENS”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽寶股份有限公司<br>地址：台北市大安區信義路四段380號7樓</td>
+<td>SIEMENS HEARING SYSTEMS, LLC<br>廠址：BLCOK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第006470號</td>
+<td>2019/11/04<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2008/01/18<br>｜<br>2018/01/18</td>
+<td>“西門子”全系列氣導式助聽器 (未滅菌)<br>“Siemens” All Series Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>宜林科技有限公司<br>地址：台北市大同區長安西路５３巷５號１樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第006558號</td>
+<td>2019/12/13<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2008/03/06<br>｜<br>2018/03/06</td>
+<td>“友旺” 氣導式助聽器(未滅菌)<br>“You Wan” Air Conduction Hearing Aids (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>友旺醫療器材股份有限公司<br>地址：台北市大安區羅斯福路3段237號2樓之2</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第006860號</td>
+<td>2024/10/11<br>已註銷<br>屆期未申請展延;;許可證已逾有效期</td>
+<td class="center">2008/07/02<br>｜<br>2023/07/02</td>
+<td>“英特通”氣導式助聽器 (未滅菌)<br>“Interton”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>誠惠科技股份有限公司<br>地址：新北市新莊區中正路347巷8號1樓</td>
+<td>INTERTON A/S<br>廠址：LAUTRUPBJERG 9 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007149號</td>
+<td>2022/06/17<br>已註銷<br>許可證已逾有效期;;自行鍵入</td>
+<td class="center">2008/10/20<br>｜<br>2018/10/20</td>
+<td>“音多美”優而康氣導式助聽器 (未滅菌)<br>“Indomed”Unitron Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>富聆股份有限公司<br>地址：臺北市大安區忠孝東路４段１６６號１２樓之２</td>
+<td>UNITRON HEARING GMBH<br>廠址：LAUBISRUTISTRASSE 28 CH-8712 STAFA SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007493號</td>
+<td>2017/01/09<br>已註銷<br>自行鍵入</td>
+<td class="center">2009/02/17<br>｜<br>2014/02/17</td>
+<td>“普耳通”氣導助聽器 (未滅菌)<br>“Puretone”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>建聲實業有限公司<br>地址：臺中市西屯區臺灣大道三段96之6樓之2</td>
+<td>PURETONE LTD.<br>廠址：9-10 HENLEY BUSINESS PARK, TRIDENT CLOSE, MEDWAY CITY ESTATE, ROCHESTER, KENT. ME2 4FR, UNITED KINGDOM<br><br>製造廠國別：GB</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007552號</td>
+<td>2016/11/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2009/03/13<br>｜<br>2014/03/13</td>
+<td>“柏峰”氣導助聽器 (未滅菌)<br>Bernafon”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路三六六號12樓之3</td>
+<td>BERNAFON DISTRIBUTION CENTER<br>廠址：73,Tilstedvej, DK-7700 Thisted, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007560號</td>
+<td>2017/01/09<br>已註銷<br>自行鍵入</td>
+<td class="center">2009/03/17<br>｜<br>2014/03/17</td>
+<td>“鋒力”助聽器 (未滅菌)<br>“PHONAK AG”Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>佳音聽力有限公司<br>地址：台北市中山區民權西路27號10樓之1</td>
+<td>PHONAK AG<br>廠址：LAUBISRUTISTRASSE 288712, STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007577號</td>
+<td>2016/11/15<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2009/03/20<br>｜<br>2014/03/20</td>
+<td>“豐納客”助聽器 (未滅菌)<br>“PHONAK AG”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>愛聆生物科技有限公司<br>地址：台北市中正區新生南路一段104號5樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE 28, 8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007595號</td>
+<td>2017/01/09<br>已註銷<br>自行鍵入</td>
+<td class="center">2009/03/26<br>｜<br>2014/03/26</td>
+<td>“豐利”助聽器 (未滅菌)<br>“Phonak”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>承輝聽語有限公司<br>地址：臺中市南屯區大墩路812號3樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007918號</td>
+<td>2018/06/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2009/07/16<br>｜<br>2014/07/16</td>
+<td>“美格通”普聲納助聽器 (未滅菌)<br>“Magnatone”Persona Medical Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>龍友實業有限公司<br>地址：台中市西屯區工業區一路2巷3號6樓之8</td>
+<td>MAGNATONE HEARING AID CORPORATION<br>廠址：170, NORTH CYPRESS WAY, CASSELBERRY, FL32718-0964 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第007925號</td>
+<td>2022/06/22<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2009/07/21<br>｜<br>2019/07/21</td>
+<td>“峰利”助聽器 (未滅菌)<br>“Phonak” hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>升音實業有限公司<br>地址：台中市西區博館路240號1樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUTISTRASSE28, 8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008002號</td>
+<td>2018/06/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2009/08/26<br>｜<br>2014/08/26</td>
+<td>“明展”助聽器（未滅菌）<br>“Aescu”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>明展生醫科技股份有限公司<br>地址：台北市北投區義理街17號1樓</td>
+<td>AUDIFON GMBH<br>廠址：WERNER-VON-SIEMENS-STRASSE 2, D 99625 KOLLEDA, GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008054號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2009/09/08<br>｜<br>2024/09/08</td>
+<td>“和聲通” 氣導助聽器 (未滅菌)<br>“Hansaton” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>建聲實業有限公司<br>地址：臺中市西屯區臺灣大道三段96號6樓之2</td>
+<td>HANSATON AKUSTIK GMBH<br>廠址：SACHESENKAMP 5 20097 HAMBURG GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008118號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2009/09/21<br>｜<br>2024/09/21</td>
+<td>“博士”助聽器（未滅菌）　<br>“Dr. Hearing”Argosy Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>博士生物科技股份有限公司<br>地址：桃園市桃園區中山路528號3樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008141號</td>
+<td>2022/05/19<br>已註銷<br>自行鍵入</td>
+<td class="center">2009/09/23<br>｜<br>2019/09/23</td>
+<td>“西門子”助聽器 (未滅菌)<br>“Siemens” Hearing aids(Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>理工科技工程顧問有限公司<br>地址：臺北市大安區新生南路1段103巷13號</td>
+<td>SIVANTOS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008205號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2009/10/12<br>｜<br>2024/10/12</td>
+<td>“百醫”助聽器 (未滅菌)<br>“Bai Yi”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>百醫有限公司<br>地址：臺北市中正區羅斯福路2段10號4樓</td>
+<td>GN RESOUND<br>廠址：LAUTRUPBJERG 7, 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008206號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2009/10/12<br>｜<br>2024/10/12</td>
+<td>“百醫”助聽器 (未滅菌)<br>“Bai Yi”Hearing Aid (Non-Strerile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>百醫有限公司<br>地址：臺北市中正區羅斯福路2段10號4樓</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08, SINGAPORE<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008250號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2009/10/29<br>｜<br>2014/10/29</td>
+<td>“大詠韻”助聽器 (未滅菌)<br>“Sound Shine” Hearing aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>大詠韻企業社<br>地址：台南市東區崇善十一街12巷24號</td>
+<td>PHONAK AG<br>廠址：LAUBISRUTISTRASSE 28, 8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008380號</td>
+<td>2018/06/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2009/12/09<br>｜<br>2014/12/09</td>
+<td>“松下”助聽器（未滅菌）<br>“PANASONIC”HEARING AID （Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>臺松電器販賣股份有限公司<br>地址：新北市中和區建六路57號</td>
+<td>PANASONIC SHIKOKU ELECTRONICS CO., LTD.<br>廠址：SAIJO SEIZOUSYO, FUKUTAKE, SAIJO CITY, EHIME, 793-8510 JAPAN<br><br>製造廠國別：JP</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008469號</td>
+<td>2018/04/25<br>已註銷<br>自行鍵入</td>
+<td class="center">2010/01/19<br>｜<br>2015/01/19</td>
+<td>“柯塞吉”助聽器（未滅菌）<br>“Coselgi ”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美得聲股份有限公司<br>地址：高雄市前金區中華三路5號4樓之1</td>
+<td>COSELGI A/S<br>廠址：NYMOELLEVEJ 6, 3540 LYNGE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008592號</td>
+<td>2012/05/25<br>已註銷<br>自請註銷</td>
+<td class="center">2010/03/03<br>｜<br>2015/03/03</td>
+<td>“悅耳”助聽器（未滅菌）<br>“Yue er” Hearing aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>悅耳科技有限公司<br>地址：台中市北區金華里興進路211號</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008598號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/03/04<br>｜<br>2025/03/04</td>
+<td>“ 柏峰“ 氣導助聽器 (未滅菌)<br>“Bernafon“ Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>BERNAFON AG<br>廠址：MORGENSTRASSE 131, P.O. BOX 550 CH-3018 BERN, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008598號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/03/04<br>｜<br>2025/03/04</td>
+<td>“ 柏峰“ 氣導助聽器 (未滅菌)<br>“Bernafon“ Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smorum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008686號</td>
+<td>2019/01/23<br>已註銷<br>公司歇業</td>
+<td class="center">2010/04/07<br>｜<br>2020/04/07</td>
+<td>“音得通”氣導式助聽器 (未滅菌)<br>“Interton”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>興宣科技股份有限公司<br>地址：台北市松山區民權東路3段144號10樓之4(1125室)</td>
+<td>INTERTON A/S<br>廠址：LAUTRUPBJERG 7 POSTBOKS 7 BALLERUP, 2750 DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008951號</td>
+<td>2018/04/25<br>已註銷<br>自行鍵入</td>
+<td class="center">2010/06/29<br>｜<br>2015/06/29</td>
+<td>“惟聽” 助聽器 (未滅菌)<br>“Widex”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>美得聲股份有限公司<br>地址：高雄市前金區中華三路5號4樓之1</td>
+<td>WIDEX A/S<br>廠址：NY VESTERGAARDSVEJ 25 3500 VAERLOESE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第008961號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/07/01<br>｜<br>2025/07/01</td>
+<td>“峰力”氣導式助聽器 (未滅菌)<br>“PHONAK”Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009297號</td>
+<td>2022/08/05<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2010/10/27<br>｜<br>2020/10/27</td>
+<td>“全國”力斯頓助聽器（未滅菌）<br>“ALL DAY”REXTON Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>全國實業有限公司<br>地址：臺北市中正區前路6號5樓7室</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLK 28, AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009303號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/10/04<br>｜<br>2025/10/04</td>
+<td>"奧康" 助聽器 (未滅菌)<br>"Oticon" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>OTICON A/S<br>廠址：KONGEBAKKEN 9 DK-2765 SMORUM DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009303號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/10/04<br>｜<br>2025/10/04</td>
+<td>"奧康" 助聽器 (未滅菌)<br>"Oticon" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>SBO Hearing A/S<br>廠址：Kongebakken 9, 2765 Smorum, Denmark<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009426號</td>
+<td>2018/06/25<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2010/10/29<br>｜<br>2015/10/29</td>
+<td>"依賽倫特" 助聽器 (未滅菌)<br>"ExSilent" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>頌主恩實業有限公司<br>地址：南投縣草屯鎮太平路一段191號1樓</td>
+<td>EXSILENT B.V.<br>廠址：HERENGRACHT 520 1017CC AMSTERDAM THE NETHERLANDS<br><br>製造廠國別：NL</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009487號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2010/11/10<br>｜<br>2015/11/10</td>
+<td>“峰力”阿格西助聽器(未滅菌)<br>“Phonak”Argosy Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣峰力私人有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009499號</td>
+<td>2022/08/05<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2010/11/12<br>｜<br>2020/11/12</td>
+<td>“貝耳通” 助聽器（未滅菌）<br>“Beltone”Hearing Aids(Non-Sterile)　</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>BELTONE A/S<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009664號</td>
+<td>2018/08/09<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2010/12/13<br>｜<br>2015/12/13</td>
+<td>“好適聽”氣導式助聽器 (未滅菌)　<br>“Hansaton”Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽貝爾股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>HANSATON HEARING SYSTEMS, LLC<br>廠址：STUECKEN STRASSE 48 D-22081 HAMBURG, GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009665號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2010/12/13<br>｜<br>2025/12/13</td>
+<td>“貝爾通”氣導式助聽器 (未滅菌)　<br>“BELTONE”Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽貝爾股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>BELTONE A/S<br>廠址：LAUTRUPBJERG 7 DK-2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009666號</td>
+<td>2018/08/09<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2010/12/13<br>｜<br>2015/12/13</td>
+<td>“優力康”氣導式助聽器 (未滅菌)　<br>“Unitron”Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽貝爾股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>UNITRON HEARING LTD.<br>廠址：20 BEASLEY DRIVE, KITCHENER, ONTARIO, CANADA N2G 4X1<br><br>製造廠國別：CA</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009667號</td>
+<td>2018/08/09<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2010/12/13<br>｜<br>2015/12/13</td>
+<td>“聽貝爾”氣導式助聽器（未滅菌）<br>“Bay Audiology”Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>聽貝爾股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009734號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2010/12/23<br>｜<br>2015/12/23</td>
+<td>"科克蘭" 助聽器 (未滅菌)　<br>“KIRKLAND SIGNATURE”Hearing Aids (Non-Sterile)　</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>好市多股份有限公司<br>地址：高雄市前區區中華五路656號</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD.SINGAPORE<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009789號</td>
+<td>2018/08/09<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2011/01/11<br>｜<br>2016/01/11</td>
+<td>“聽貝爾”瑞斯登氣導式助聽器（未滅菌）　<br>“Bay Audiology”Rexton Hearing Aids (Non-Sterile)　</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>聽貝爾股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009790號</td>
+<td>2018/08/09<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2011/01/11<br>｜<br>2016/01/11</td>
+<td>“美納通”氣導式助聽器（未滅菌）　<br>“Magnatone”Air Conduction Hearing Aids (Non-Sterile)　</td>
+<td>1 級醫材<br>
+</td>
+<td>聽貝爾股份有限公司<br>地址：台北市大安區信義路四段380號7樓之1</td>
+<td>MEGNATON HEARING AOD CORPORATION<br>廠址：170 NORTH CYPRESS WAY P.O. BOX 180964 CASSELBERRY, FL 32718-0964 USA<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009896號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/02/08<br>｜<br>2016/02/08</td>
+<td>“德音”助聽器 (未滅菌)　<br>“INTERTON”Hearing Aid (Non-Sterile)　</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>佳音聽力有限公司<br>地址：台北市中山區民權西路27號10樓之1</td>
+<td>INTERTON (GN RESOUND AS)<br>廠址：LAUTRUPBJERG 7 2750 BALLERUP DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第009910號</td>
+<td>2018/07/31<br>已註銷<br>未展延而逾期者</td>
+<td class="center">2011/02/22<br>｜<br>2016/02/22</td>
+<td>"西門子"易耳通助聽器(未滅菌)<br>"SIEMENS" ELECTONE HEARING AID (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市中山區復興北路164號7樓之1</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第010074號</td>
+<td>2018/08/14<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/03/22<br>｜<br>2016/03/22</td>
+<td>“瑞斯頓”氣導式助聽器 (未滅菌)　<br>“REXTON”Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>好市多股份有限公司<br>地址：高雄市前區區中華五路656號</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD.<br>廠址：BLK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第010085號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2011/03/25<br>｜<br>2026/03/25</td>
+<td>"斯達克"助聽器(未滅菌)<br>"Starkey" Hearing Aid(Non-Sterile)</td>
+<td>1 級醫材<br>第一級：空氣傳導性助聽器</td>
+<td>利凌科技股份有限公司<br>地址：臺北市松山區八德路3段30號13樓</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：6700 WASHINGTON AVENUE SOUTH EDEN PRAIRIE, MINNESOTA 55344 U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第010482號</td>
+<td>2018/06/26<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2011/06/17<br>｜<br>2016/06/17</td>
+<td>“明展”助聽器 (未滅菌)<br>"Aescu" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>明展生醫科技股份有限公司<br>地址：台北市北投區義理街17號1樓</td>
+<td>INTRICON CORPORATION<br>廠址：1260 RED FOX ROAD ARDEN HILLS, MN55112 USA<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第010550號</td>
+<td>2015/07/20<br>已註銷<br>公司歇業</td>
+<td class="center">2011/07/08<br>｜<br>2016/07/08</td>
+<td>"旭晟" 瑞斯德 助聽器 (未滅菌)<br>"SC" Rexton Hearing Aid Device(Non-Sterile)</td>
+<td>1 級醫材<br>此器材是為空氣傳導性助聽器，屬第一等級。</td>
+<td>旭晟助聽器材股份有限公司<br>地址：臺北市大安區信義路3段106號8樓之2</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第010747號</td>
+<td>2022/03/21<br>已註銷<br>自請註銷;;屆期未申請展延</td>
+<td class="center">2011/08/24<br>｜<br>2021/08/24</td>
+<td>"井上" 霖聲 氣導式助聽器 (未滅菌)　<br>"Jingshang" NEOsound Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>井上醫療器材有限公司<br>地址：臺北市北投區知行路316巷20弄11號</td>
+<td>AUSTAR HEARING SCIENCE AND TECHNOLOGY CO,. LTD<br>廠址：177 TOA PAYOH CENTREL #01-152, SINGAPORE 310177<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第010833號</td>
+<td>2011/10/19<br>已註銷<br>證別變更</td>
+<td class="center">2011/09/15<br>｜<br>2016/09/15</td>
+<td>“希耳聆”李邁傑斯助聽器 (未滅菌)<br>“Hearing”Lee Majors Rechargeable Bionic Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>元勛國際股份有限公司<br>地址：新北市新店區中興路二段196號2樓</td>
+<td>HEARING ASSIST, LLC<br>廠址：945 SEAHAWK CIRCLE, VIRGINIA BEACH,VA 23452, U.S.A.<br><br>製造廠國別：US</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第011349號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/02/08<br>｜<br>2022/02/08</td>
+<td>“利聲可”欣頌氣導性助聽器(未滅菌)<br>“RESONIC” SINSOUN Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>加恩展業有限公司<br>地址：新北市板橋區長安街二十五巷一之三號四樓</td>
+<td>RESONIC PTE LTD<br>廠址：19 TANGLIN ROAD#05-17 TANGLIN SHOPPING CENTRE SINGAPORE 247909<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第011529號</td>
+<td>2019/01/18<br>已註銷<br>公司歇業</td>
+<td class="center">2012/03/23<br>｜<br>2017/03/23</td>
+<td>“虹韻”峰力氣導式助聽器(未滅菌)<br>“New Best” Phonak Air Conduction Hearing Aids (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>虹韻醫療器材股份有限公司<br>地址：台北市中正區衡陽路２０號４樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第011676號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/05/08<br>｜<br>2022/05/08</td>
+<td>"惟聽" 氣導助聽器 (未滅菌)<br>"Widex" Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>美樂迪股份有限公司<br>地址：臺北市大安區忠孝東路4段191號2樓之1</td>
+<td>WIDEX A/S<br>廠址：NYMOELLEVE J 6 3540 LYNGE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第011921號</td>
+<td>2019/11/15<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/07/06<br>｜<br>2017/07/06</td>
+<td>“惟聽”氣導式助聽器(未滅菌)<br>“Widex” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>美得聲股份有限公司<br>地址：高雄市前金區中華三路23之2號</td>
+<td>WIDEX A/S<br>廠址：NYMOELLEVEJ 6, 3540 LYNGE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第011988號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/07/27<br>｜<br>2022/07/27</td>
+<td>“奧迪峰”氣導式助聽器(未滅菌)　<br>“Audifon” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>頌主恩實業有限公司<br>地址：南投縣草屯鎮上林里太平路一段191號1樓</td>
+<td>AUDIFON GMBH ＆ CO. KG<br>廠址：WERNER-VON-SIEMENS-STRASE 2 99625 KOLLEDA GERMANY<br><br>製造廠國別：DE</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第012097號</td>
+<td>2019/11/28<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/08/23<br>｜<br>2017/08/23</td>
+<td>“舒尼刻”氣導式助聽器(未滅菌)<br>“Sonic” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白。</td>
+<td>富聆股份有限公司<br>地址：臺北市大安區忠孝東路４段１６６號１２樓之２</td>
+<td>SONIC AG<br>廠址：TILSTEDVEJ 73 7700 THISTED, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第012106號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/08/24<br>｜<br>2022/08/24</td>
+<td>"斯達克"助聽器(未滅菌)<br>"Starkey" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>第一級：空氣傳導性助聽器，以下空白。</td>
+<td>利凌科技股份有限公司<br>地址：臺北市中山區復興北路164號7樓之1</td>
+<td>STARKEY LABORATORIES, INC.<br>廠址：STARKEY DE MEXICO, S. A. DE C. V. CALLE NORTE 7 NUMERO LOTE 2Y 3. ENTRE DIAGONAL LORENZO DE LA GARZA PONIENTE 2. COLONIA CIUDAD INDUSTRIAL. H. MATAMOROS, TAMAULIPAS. CP87499 MEXICO<br><br>製造廠國別：MX</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第012138號</td>
+<td>2024/04/12<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/09/06<br>｜<br>2022/09/06</td>
+<td>統一 助聽器 (未滅菌)<br>〝Tone-E〞 A&amp;M Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>統一助聽器行<br>地址：高雄市新興區中山一路200號3樓之2號</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第012509號</td>
+<td>2019/12/13<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2012/12/20<br>｜<br>2017/12/20</td>
+<td>“峰立”氣導式助聽器 (未滅菌)<br>“PHONAK” Air Conduction Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>亞士頓科技企業社<br>地址：高雄市苓雅區自強三路3號26樓之3</td>
+<td>PHONAK HEARING SYSTEMS<br>廠址：LAUBISRUTISTRASSE 28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第012624號</td>
+<td>2019/11/15<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2013/01/22<br>｜<br>2018/01/22</td>
+<td>"聽健"助聽器(未滅菌)<br>"Ting Jian" Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>空氣傳導性助聽器，以下空白。</td>
+<td>聽健醫療器材有限公司<br>地址：臺北市大安區忠孝東路4段293號10樓之2</td>
+<td>SIEMENS MEDICAL INSTRUMENTS PTE LTD<br>廠址：BLOCK 28 AYER RAJAH CRESCENT #06-08 SINGAPORE 139959<br><br>製造廠國別：SG</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第012838號</td>
+<td>2019/12/13<br>已註銷<br>許可證已逾有效期</td>
+<td class="center">2013/03/25<br>｜<br>2018/03/25</td>
+<td>雅歌助聽器 (未滅菌)<br>Argosy Hearing Aid (Non-Sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白。</td>
+<td>台灣索諾瓦有限公司<br>地址：新北市中和區板南路661號4樓</td>
+<td>PHONAK AG<br>廠址：LAUBISRUISTRASSE28, CH-8712 STAFA, SWITZERLAND<br><br>製造廠國別：CH</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第013002號</td>
+<td>
+<br><br>
+</td>
+<td class="center">2013/05/09<br>｜<br>2023/05/09</td>
+<td>“科思奇”氣導式助聽器 (未滅菌)<br>“Coselgi” Air Conduction Hearing Aid (non-sterile)</td>
+<td>1 級醫材<br>空白</td>
+<td>科林儀器股份有限公司<br>地址：新北市中和區中和路366號12樓之3</td>
+<td>COSELGI A/S<br>廠址：NYMOELLEVEJ 6, DK-3540 LYNGE, DENMARK<br><br>製造廠國別：DK</td>
+</tr>
+<tr>
+<td>衛署醫器輸壹字第013217號</td>
+<td>2013/09/13<br>已註銷<br>證別變更</td>
+<td class="center">2013/07/17<br>｜<br>2018/07/17</td>
+<td>易耳通助聽器 (未滅菌)<br>EasyHear Hearing Aid (Non-sterile)</td>
+<td>1 級醫材<br>氣導式助聽器，以下空白</td>
+<td>瀚宇興業有限公司<br>地址：臺北市信義區忠孝東路5段1之8號2樓</td>
+<td>LOGITAL CO. LIMITED<br>廠址：ROOM 901, 9/F NATHAN CENTRE, 580G NATHAN ROAD, KOWLOON, HONG KONG<br><br>製造廠國別：HK</td>
+</tr>
+</tbody>
+</table>
+<p>原始資料來源：<a href="https://data.gov.tw/dataset/9576">醫療器材許可證資料集｜政府資料開放平臺</a></p>
+<hr>
+<footer><section id="about"><h2>台灣助聽器醫療器材許可證字號資料表產生器</h2>
+<dl>
+<dt>目前使用的資料表產生器版本</dt>
+<dd>v2024.12.23</dd>
+</dl>
+<ul>
+<li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">下載最新版套件</a></li>
+<li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/issues">意見回饋／瑕疵回報</a></li>
+<li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator">專案網頁</a></li>
+</ul></section><section id="link"><h2>相關連結</h2>
+<ul>
+<li><a href="https://lmspiq.fda.gov.tw/web/MDPIQ/MDPIQLicSearch">醫療器材許可證及登錄查詢</a></li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0030120">《醫療器材分類分級管理辦法》</a></li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050060">《身心障礙者輔具費用補助辦法》</a></li>
+</ul></section></footer>
+</body>
+</html><script>
+function filterFunction() {
+  // Declare variables
+  var input1, input2, filter1, filter2, table, tr, td1, td4, i, txtValue;
+  input1 = document.getElementById("permitInput");
+  input2 = document.getElementById("brandInput");
+  filter1 = input1.value.toUpperCase();
+  filter2 = input2.value.toUpperCase();
+  table = document.getElementById("dataTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td1 = tr[i].getElementsByTagName("td")[0];
+    td4 = tr[i].getElementsByTagName("td")[3];
+    if (td1 || td4) {
+      txtValue1 = td1.textContent || td1.innerText;
+      txtValue2 = td4.textContent || td4.innerText;
+      if (txtValue1.toUpperCase().indexOf(filter1) > -1 && txtValue2.toUpperCase().indexOf(filter2) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
