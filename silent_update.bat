@@ -55,10 +55,12 @@ IF %@FILESIZE["68_1.xml.zip"] == 0 (
 
 :cont
 echo %time% Process XML >> silent_update.log
-xml.exe tr G3300.xsl 68_1.xml > G3300.html
+xml.exe -q fo --recover 68_1.xml > 68_1_format.xml
+xml.exe tr G3300.xsl 68_1_format.xml > G3300.html
 
 IF EXIST "G3300.html" (
   echo %time% Clean-up >> silent_update.log
+  del /F /Q 68_1_format.xml >> silent_update.log 2>&1
   del /F /Q 68_1.xml >> silent_update.log 2>&1
   del /F /Q 68_1.xml.zip >> silent_update.log 2>&1
   GOTO end
