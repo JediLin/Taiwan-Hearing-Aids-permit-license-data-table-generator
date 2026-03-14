@@ -214,7 +214,7 @@ section#link {
           <h2>台灣助聽器醫療器材許可證字號資料表產生器</h2>
           <dl>
             <dt>目前使用的資料表產生器版本</dt>
-            <dd>v2026.01.17</dd>
+            <dd>v2026.03.14</dd>
           </dl>
           <ul>
             <li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">下載最新版套件</a></li>
@@ -225,9 +225,9 @@ section#link {
         <section id="link">
           <h2>相關連結</h2>
           <ul>
-            <li><a href="https://lmspiq.fda.gov.tw/web/MDPIQ/MDPIQLicSearch">醫療器材許可證及登錄查詢</a></li>
-            <li><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=L0030120">《醫療器材分類分級管理辦法》</a></li>
-            <li><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050060">《身心障礙者輔具費用補助辦法》</a></li>
+            <li><a href="https://lmspiq.fda.gov.tw/web/MDPIQ/license-search">醫療器材許可證及登錄查詢</a></li>
+            <li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030120">《醫療器材分類分級管理辦法》</a></li>
+            <li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050060">《身心障礙者輔具費用補助辦法》</a></li>
           </ul>
         </section>
       </footer>
