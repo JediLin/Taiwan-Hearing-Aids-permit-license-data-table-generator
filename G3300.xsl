@@ -187,7 +187,7 @@ section#link {
       <table id="dataTable">
       	<caption>製表日期：<xsl:value-of select="date:year()"/> 年 <xsl:value-of select="date:month-in-year()"/> 月 <xsl:value-of select="date:day-in-month()"/> 日</caption>
       	<thead>
-      	  <tr><th>許可證字號<br/><label for="permitInput">快查：</label><input type="text" id="permitInput" onkeyup="filterFunction()" placeholder="可只輸入數字部分" title="可只輸入數字部分" aria-description="可只輸入許可證字號的數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名<br/><label for="brandInput">快查：</label><input type="text" id="brandInput" onkeyup="filterFunction()" placeholder="輸入助聽器廠牌名稱" title="輸入助聽器廠牌名稱" aria-description="輸入助聽器廠牌名稱"/></th><th>醫器級數、規格</th><th>申請商</th><th>製造商</th></tr>
+      	  <tr><th>許可證字號<br/><label for="permitInput">快查：</label><input type="text" id="permitInput" onkeyup="filterFunction()" placeholder="可只輸入數字部分" title="可只輸入數字部分" aria-description="可只輸入許可證字號的數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名<br/><label for="brandInput">快查：</label><input type="text" id="brandInput" onkeyup="filterFunction()" placeholder="輸入助聽器廠牌名稱" title="輸入助聽器廠牌名稱" aria-description="輸入助聽器廠牌名稱"/></th><th>醫器級數、規格</th><th>申請商</th><th>製造商<br/><label for="countryInput">國別快查：</label><input type="text" id="countryInput" onkeyup="filterFunction()" placeholder="輸入製造廠國家代碼" title="輸入製造廠國家代碼" aria-description="輸入製造廠國家代碼"/></th></tr>
       	</thead>
       	<tbody>
             <xsl:for-each select="dataList">
@@ -214,7 +214,7 @@ section#link {
           <h2>台灣助聽器醫療器材許可證字號資料表產生器</h2>
           <dl>
             <dt>目前使用的資料表產生器版本</dt>
-            <dd>v2026.03.14</dd>
+            <dd>v2026.07.01</dd>
           </dl>
           <ul>
             <li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">下載最新版套件</a></li>
@@ -236,11 +236,13 @@ section#link {
     <script>
 function filterFunction() {
   // Declare variables
-  var input1, input2, filter1, filter2, table, tr, td1, td4, i, txtValue;
+  var input1, input2, input3, filter1, filter2, filter3, table, tr, td1, td4, td7, i, txtValue;
   input1 = document.getElementById("permitInput");
   input2 = document.getElementById("brandInput");
+  input3 = document.getElementById("countryInput");
   filter1 = input1.value.toUpperCase();
   filter2 = input2.value.toUpperCase();
+  filter3 = "製造廠國別：" + input3.value.toUpperCase();
   table = document.getElementById("dataTable");
   tr = table.getElementsByTagName("tr");
 
@@ -248,10 +250,12 @@ function filterFunction() {
   for (i = 0; i <xsl:text disable-output-escaping="yes">&lt;</xsl:text> tr.length; i++) {
     td1 = tr[i].getElementsByTagName("td")[0];
     td4 = tr[i].getElementsByTagName("td")[3];
-    if (td1 || td4) {
+    td7 = tr[i].getElementsByTagName("td")[6];
+    if (td1 || td4 || td7) {
       txtValue1 = td1.textContent || td1.innerText;
       txtValue2 = td4.textContent || td4.innerText;
-      if (txtValue1.toUpperCase().indexOf(filter1) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1 <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> txtValue2.toUpperCase().indexOf(filter2) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1) {
+      txtValue3 = td7.textContent || td7.innerText;
+      if (txtValue1.toUpperCase().indexOf(filter1) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1 <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> txtValue2.toUpperCase().indexOf(filter2) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1 <xsl:text disable-output-escaping="yes">&amp;&amp;</xsl:text> txtValue3.toUpperCase().indexOf(filter3) <xsl:text disable-output-escaping="yes">&gt;</xsl:text> -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
