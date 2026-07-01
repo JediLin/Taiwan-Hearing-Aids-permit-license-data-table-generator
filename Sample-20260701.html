@@ -91,6 +91,26 @@
     --nightbackground: hsl(210,6%,12%);
   }
 }
+@supports (text-autospace: replace) {
+  :root {
+    text-autospace: ideograph-alpha ideograph-numeric replace;
+  }
+}
+@supports (text-spacing-trim: normal) {
+  :root {
+    text-spacing-trim: normal;
+  }
+}
+@supports (text-spacing-trim: trim-start) {
+  :root {
+    text-spacing-trim: trim-start;
+  }
+}
+@supports (text-spacing-trim: trim-both) {
+  :root {
+    text-spacing-trim: trim-both;
+  }
+}
 body {
   color: var(--foreground);
   background: var(--background);
@@ -3668,7 +3688,7 @@ section#link {
 <footer><section id="about"><h2>台灣助聽器醫療器材許可證字號資料表產生器</h2>
 <dl>
 <dt>目前使用的資料表產生器版本</dt>
-<dd>v2026.07.01</dd>
+<dd>v2026.07.01.1</dd>
 </dl>
 <ul>
 <li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">下載最新版套件</a></li>
