@@ -205,14 +205,14 @@ section#link {
     <body>
       <h1>助聽器醫療器材許可證字號暨相關資訊</h1>
       <table id="dataTable">
-      	<caption>製表日期：<xsl:value-of select="date:year()"/> 年 <xsl:value-of select="date:month-in-year()"/> 月 <xsl:value-of select="date:day-in-month()"/> 日</caption>
-      	<thead>
-      	  <tr><th>許可證字號<br/><label for="permitInput">快查：</label><input type="text" id="permitInput" onkeyup="filterFunction()" placeholder="可只輸入數字部分" title="可只輸入數字部分" aria-description="可只輸入許可證字號的數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名<br/><label for="brandInput">快查：</label><input type="text" id="brandInput" onkeyup="filterFunction()" placeholder="輸入助聽器廠牌名稱" title="輸入助聽器廠牌名稱" aria-description="輸入助聽器廠牌名稱"/></th><th>醫器級數、規格</th><th>申請商</th><th>製造商<br/><label for="countryInput">國別快查：</label><input type="text" id="countryInput" onkeyup="filterFunction()" placeholder="輸入製造廠國家代碼" title="輸入製造廠國家代碼" aria-description="輸入製造廠國家代碼"/></th></tr>
-      	</thead>
-      	<tbody>
+        <caption>製表日期：<xsl:value-of select="date:year()"/> 年 <xsl:value-of select="date:month-in-year()"/> 月 <xsl:value-of select="date:day-in-month()"/> 日</caption>
+        <thead>
+          <tr><th>許可證字號<br/><label for="permitInput">快查：</label><input type="text" id="permitInput" onkeyup="filterFunction()" placeholder="可只輸入數字部分" title="可只輸入數字部分" aria-description="可只輸入許可證字號的數字部分"/></th><th>註銷狀態</th><th>有效日期</th><th>品名<br/><label for="brandInput">快查：</label><input type="text" id="brandInput" onkeyup="filterFunction()" placeholder="輸入助聽器廠牌名稱" title="輸入助聽器廠牌名稱" aria-description="輸入助聽器廠牌名稱"/></th><th>醫器級數、規格</th><th>申請商</th><th>製造商<br/><label for="countryInput">國別快查：</label><input type="text" id="countryInput" onkeyup="filterFunction()" placeholder="輸入製造廠國家代碼" title="輸入製造廠國家代碼" aria-description="輸入製造廠國家代碼"/></th></tr>
+        </thead>
+        <tbody>
             <xsl:for-each select="dataList">
               <xsl:for-each select="rows">
-              	<xsl:if test="((醫器次類別一='G.3300 助聽器') or (醫器次類別一='G3300 助聽器') or (醫器次類別二='G.3300 助聽器') or (醫器次類別二='G3300 助聽器') or (醫器次類別三='G.3300 助聽器') or (醫器次類別三='G3300 助聽器'))">
+                <xsl:if test="((starts-with(醫器次類別一, 'G.3300')) or (starts-with(醫器次類別一, 'G3300')) or (starts-with(醫器次類別二, 'G.3300')) or (starts-with(醫器次類別二, 'G3300')) or (starts-with(醫器次類別三, 'G.3300')) or (starts-with(醫器次類別三, 'G3300')))">
                   <tr>
                     <td><xsl:value-of select = "許可證字號" /></td>
                     <td><xsl:value-of select = "註銷日期" /><br /><xsl:value-of select = "註銷狀態" /><br /><xsl:value-of select = "註銷理由" /></td>
@@ -234,7 +234,7 @@ section#link {
           <h2>台灣助聽器醫療器材許可證字號資料表產生器</h2>
           <dl>
             <dt>目前使用的資料表產生器版本</dt>
-            <dd>v2026.07.01.1</dd>
+            <dd>v2026.10.04</dd>
           </dl>
           <ul>
             <li><a href="https://github.com/JediLin/Taiwan-Hearing-Aids-permit-license-data-table-generator/releases/latest">下載最新版套件</a></li>
