@@ -82,7 +82,7 @@ IF %colorSupport%==Yes (
   echo ●○○○[1/4] 正在從政府資料開放平臺下載醫療器材許可證資料集……
 )
 echo:
-wget.exe --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1"
+wget.exe --output-document=68_1.xml.zip "https://data.fda.gov.tw/data/opendata/export/68/xml"
 
 IF EXIST "68_1.xml.zip" (
   GOTO unzip

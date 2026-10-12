@@ -36,7 +36,7 @@ IF EXIST "G3300.html" (
 
 :download
 echo %time% Download XML >> silent_update.log
-wget.exe --output-document=68_1.xml.zip "https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=68&logType=1" >> silent_update.log 2>&1
+wget.exe --output-document=68_1.xml.zip "https://data.fda.gov.tw/data/opendata/export/68/xml" >> silent_update.log 2>&1
 
 IF EXIST "68_1.xml.zip" (
   GOTO unzip
